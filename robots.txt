@@ -1,0 +1,4 @@
+User-agent:*
+Disallow:
+
+Sitemap: https://github.com/guZhouTingXue/guZhouTingXue.io/sitemap.xml
