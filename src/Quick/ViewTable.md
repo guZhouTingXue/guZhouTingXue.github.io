@@ -6,17 +6,18 @@
 > 
 > A TableView does not include headers by default. You can add headers using the HorizontalHeaderView and VerticalHeaderView from Qt Quick Controls.
 
+# ViewTable
 
-# C++ Models
+## C++ Models
 > This example shows how to create a model from C++ with multiple columns
 
 ## 构建
 1. 新建项目：选择Qt Quick Application
-![](attachment/fda46674338acd252513d7191cf18903.png)
+![](attachments/构建项目.png)
 2. 创建class：TableModel。将代码拷贝到tableModel.h
 3. 修改Main.qml：注意这里不需要import，因为TableModel 中使用了QML_ELEMENT宏，qt会帮我们注册该TableModel 到QML 中
 
-## 实现
+### 实现
 TableModel：
 1. TableModel 继承于 QAbstractTableModel；
 2. role 为 DisplayRole 是返回 单元格 行号、列号构成的字符串；
@@ -27,31 +28,31 @@ Main.qml
 2. 在delegate 中指定 单元格的样式-Rectangle；
 3. 通过display - Display 的名称获取显示的数据
 
-## 效果
-![](attachment/95e28cb053a8ae10d05f1ab9331884e6.png)
+### 效果
+![|412x309](attachments/C++model效果.png)
 1. 单元格内容：单元格编号；
 2. 没有表头
 3. 可以通过鼠标控制显示的单元格范围
 
 
-# QML Models
+## QML Models
 > For prototyping and displaying very simple data (from a web API, for example), TableModel can be used:
 
-## 实现
+### 实现
 1. import Qt.labs.qmlmodels;
 2. model 的列数量由TableModelColumn 指定；
 3. TableModelColumn：表示model中的一列，将Qt‘s role 作为属性暴露出来。
 display 对应 Qt::Display，display: "name"; name 相当于 display 的别名
 4. rows：数组类型，按行存储model中的数据。通过每一列中display的 名称对其进行赋值。
 
-## 效果
-![](attachment/c3b77dc7eb0ca36b79562b7a25291d42.png)
+### 效果
+![](attachments/model.png)
 	第一列显示动物的种类，第二列显示颜色。单元格之间存在间隙。
 
-# Selecting Items
+## Selecting Items
 > You can add selection support to TableView by assigning an ItemSelectionModel to the selectionModel property. It will then use this model to control which delegate items should be shown as selected, and which item should be shown as current. You can set selectionBehavior to control if the use should be allowed to select individual cells, rows, or columns.
 
-## 实现
+### 实现
 1. 设置ItemSelectionModel
 2. delegate 判断当前绘制项是否为选中项：
 ``` js
@@ -59,10 +60,10 @@ required property bool selected
 ```
 	required：要求创建对象时要对selected 进行赋值，由ItemSelectionModel 进行判断
 3. 设置颜色：未选中的项背景颜色为灰色，选中项目背景为蓝色
-## 效果
-![](attachment/4956fb3d29055fa47773021feac7d692.png)
+### 效果
+![Selection.png](attachments/Selection.png)
 
-### 无法选中？
+#### 无法选中？
 点击表格中的项，该项背景颜色未改变-没有被选中
 1. 默认状态下是否无法通过鼠标点击修改selected项
 ItemSelectionModel 中有 currentChanged（current， previous）信号，在槽中进行打印
@@ -102,7 +103,7 @@ qml: currrent: QModelIndex(0,0,0x0,QQmlTableModel(0x1ae06846420)), previous: QMo
 > Qt Quick Controls offers a SelectionRectangle that can be used to let the user select cells.
 
 
-#### 实现
+##### 实现
 ``` js
 TableView {
 	id: tableView
@@ -112,10 +113,10 @@ SelectionRectangle {
 	target: tableView
 }
 ```
-#### 效果
-![](attachment/b2e8e34ce321bf1e2c3d79641a50839a.png)
+##### 效果
+![](attachments/flicking.png)
 可以拖动整个表格，但是无法触发选中
-#### 问题
+##### 问题
 [参考链接](https://forum.qt.io/topic/132272/qt6-2-tableview-selectionmodel-rectangle-selection-not-working/3)
 
 设置TableView的interactive 为 false
@@ -123,10 +124,103 @@ SelectionRectangle {
 interactive: false
 ```
 效果：
-![](attachment/786ed3dcd19993b90fb7c398b0a518a8.png)
+![](attachments/选中.png)
 	单击还无法选中，需要 PressAndHold - 按住并拖动才会更新selected。。。
 #### selectionMode
 默认情况下单元格无法被选中是因为interactive 为true，“A user can not drag or flick a Flickable that is not interactive."
 	交互（ineract）的方式有两种： drag、flick。默认情况下产生的flicking，禁用interactiv 后鼠标产生drag事件，或放置ScrollView中， 也只产生drag。
 	
 windows上设置为 PressAndHold 无法触发选中
+
+## Header
+HorizontalHeaderView
+
+> - can be used as an independent view or header for a TableView.
+> - assigning the TableView to the syncView property of HorizontalHeaderView. The header and the table will then be kept in sync while flicking.
+> - By default, HorizontalHeaderView displays header data from the sync view's model.
+> - By default, textRole is set to "display", meaning that data from the model's Qt::DisplayRole will be used.
+> - The application is responsible for placing the header at the correct location in the scene.
+
+### 效果
+![](attachments/header.png)
+header 显示行、列号。
+![](attachments/调整header宽度.png)
+	可以调整行列宽度；flicking 时 header 跟随表格移动
+### 实现
+### placing the header
+``` js
+HorizontalHeaderView {
+	id: horizontalHeader
+	anchors.left: tableView.left
+	anchors.top: parent.top
+}
+VerticalHeaderView {
+	id: verticalHeader
+	anchors.top: tableView.top
+	anchors.left: parent.left
+}
+TableView {
+	id: tableView
+	anchors.left: verticalHeader
+	anchors.top: horizontalHeader
+	anchors.right: parent.right
+	anchors.left: parent.left
+}
+```
+放置时先确定和parent 的关系，然后确定header 和 table 之间的关系。
+注意：anchors 时不能互相依赖
+
+### header data
+1. 从TableView中获取：
+``` js title:HorizontalHeaderView
+syncView: tableView
+```
+如果view 没有提供，那么默认显示行、列号
+
+如果TableView 使用C++提供的model：
+c++中定义header
+``` cpp title:TableModel.cpp
+QVariant TableModel::headerData(int section, Qt::Orientation orientation, int role) const
+{
+    if(orientation == Qt::Horizontal && role == Qt::DisplayRole)
+    {
+        if(section == 0)
+            return "name";
+        else if(section == 1)
+            return "color";
+    }
+    return QVariant();
+}
+```
+![](attachments/使用c++model%20header.png)
+
+
+2. 使用指定的model:
+``` js
+	HorizontalHeaderView {
+		syncView: tableView
+		model: horizontalModel
+	}
+
+	ListModel {
+		id: horizontalModel
+		ListElement { display: "name" }
+		ListElement { display: "color" }
+	}
+```
+效果：
+![](attachments/使用ListModel%20作为header.png)
+默认textRole （显示的内容） 对应 DisplayRole，可以指定为其他Role
+``` js
+	HorizontalHeaderView {
+		textRole: "cusRole"
+		model: horizontalModel
+	}
+	ListModel {
+		id: horizontalModel
+		ListElement { display: "name"; cusRole: "one" }
+		ListElement { display: "color"; cusRole: "two" }
+	}
+```
+效果：
+![](attachments/设置textRole.png)

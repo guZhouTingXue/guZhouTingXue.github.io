@@ -9,7 +9,9 @@ export default hopeTheme({
   author: {
     name: "mingStudent",
   },
-
+  //站点图标
+  //logo: "/awesomeface.png",
+  favicon: "/awesomeface.png",
   repo: "vuepress-theme-hope/vuepress-theme-hope",
 
   docsDir: "src",
@@ -23,7 +25,12 @@ export default hopeTheme({
   // 页脚
   footer: "MIT Licensed",
   displayFooter: true,
-
+	
+  //标题导航
+  //toc: {
+	//levels: [1,6]
+  //},
+	
   blog: {
     name: "明同学",
 	avatar: "/awesomeface.png",
@@ -126,8 +133,11 @@ export default hopeTheme({
 
   // 在这里配置主题提供的插件
   plugins: {
-    blog: true,
-
+    blog: {
+		excerpt: true,
+		excerptLength: 0
+	},
+	
     // 启用之前需安装 @waline/client
     // 警告: 这是一个仅供演示的测试服务，在生产环境中请自行部署并使用自己的服务！
     // comment: {
