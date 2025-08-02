@@ -6,7 +6,7 @@
 > 
 > A TableView does not include headers by default. You can add headers using the HorizontalHeaderView and VerticalHeaderView from Qt Quick Controls.
 
-# ViewTable
+# TableView
 
 ## C++ Models
 > This example shows how to create a model from C++ with multiple columns
