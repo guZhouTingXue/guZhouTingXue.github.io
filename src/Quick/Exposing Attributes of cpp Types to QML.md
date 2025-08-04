@@ -341,3 +341,250 @@ class Message : public QObject
 问：
 1. <mark style="background: #FFF3A3A6;">在QML中创建C++ 注册到QML中的类型的对象时，对象是如何创建的？是类似于直接定义一个对象还是类似于new 一个对象？</mark>
 2. <mark style="background: #FFF3A3A6;">是否所有自定义的类型都只能通过指针形式传递？</mark>
+
+ChatGPT的回答
+>大多数情况下以QObject* 或 其子类指针的形式暴露
+>QML 是脚本语言，类似JavaScript，不具备栈上对象语义
+>在QML中创建的C++类型对象是在堆上分配
+
+## Exposing Methods (Including Qt Slots)
+> Any method of a QObject-derived type is accessible from QML code if it is :
+> - A public method flaged with the Q_INVOKABLE() macro
+> - A method that is a public Qt slot
+
+在MessageBoard 中通过以上两种方式定义method，在QML中进行调用
+
+``` cpp title=MessageBoard
+class MessageBoard : public QObject{
+    Q_OBJECT
+    QML_ELEMENT
+public:
+    MessageBoard(QObject *parent = nullptr)
+        : QObject(parent)
+    {
+    }
+
+    Q_INVOKABLE QString postMessage(const QString &msg)
+    {
+        qDebug() << "Called the C++ method with" << msg;
+        return "hello QML";
+    }
+
+public slots:
+    void refresh()
+    {
+        qDebug() << "Called the C++ slot";
+    }
+};
+```
+使用：
+``` js title=Main.qml
+    MessageBoard {
+        id: board
+    }
+    MouseArea {
+        anchors.fill: parent
+        onClicked: {
+            var result = board.postMessage("Hello from QML")
+            console.log("Result of postMessage():", result);
+            board.refresh();
+        }
+    }
+```
+	MouseArea 定义了一个鼠标区域（这里填充整个窗体），点击后调用board 的method
+效果：
+``` title=output
+Called the C++ method with "Hello from QML"
+qml: Result of postMessage(): hello QML
+Called the C++ slot
+```
+board的方法被调用， 可以正确接收到QML传递的参数，并且返回的参数在QML中也可以正确打印出来。
+
+### required property
+board 可以使用属性定义的形式：
+``` js 
+    property MessageBoard board: MessageBoard {}
+```
+如果没有初始化，那么后面使用board 时，其值为NULL，会报错。
+未初始化：
+``` js
+property MessageBoard board
+```
+报错：
+``` title=error
+ TypeError: Cannot call method 'postMessage' of null
+```
+
+如果用required modifies property， 那么创建拥有该属性的对象时必须指定属性值
+
+在main.cpp中创建MessageBoard 对象，设置其id值，并传递给指定的QML对象-Main.qml作为property，QML中property 的id（对象名称）要和cpp中设置的一致
+``` cpp title=main.cpp
+#include "message.h" //头文件
+...
+int main(int argc, char *argv[])
+{
+    QGuiApplication app(argc, argv);
+
+    QQmlApplicationEngine engine;
+    MessageBoard board;
+    engine.setInitialProperties({ {"board", QVariant::fromValue(&board)} });
+	connect(...);
+	engine.loadFromModule("TableViewTest", "Main");
+
+    return app.exec();
+}
+```
+注意：
+1. 设置engine 的properties 时对象指针需要使用QVariant 进行包装，原文档中直接给定裸指针的方式已经不可用。
+	2.setInitialProperties（）要在 load之前
+	
+QML 定义property
+``` title=Main.qml
+    required property MessageBoard board
+
+```
+
+最终使用效果和在QML中定义board 一致
+
+### overloaded C++ functions
+> QML supports the calling of overloaded C++ functions. If there are multiple C++ functions with the same name but different argument, the correct function will be called according to the number and the types of arguments that are provided.
+
+ 新增带QString 参数的refresh，在qml中分别调用不带参数和带string参数的refresh
+
+``` cpp title=MessageBoard
+public slots:
+    void refresh()
+    {
+        qDebug() << "Called the C++ slot";
+    }
+    void refresh(const QString &s)
+    {
+        qDebug() << "Called the refresh(QString):" << s;
+    }
+```
+
+使用：
+``` js title=Main.qml
+    MouseArea {
+        anchors.fill: parent
+        onClicked: {
+            board.refresh()
+            board.refresh("Hello from QML")
+        }
+    }
+```
+
+结果：
+``` title=output
+Called the C++ slot
+Called the refresh(QString): "Hello from QML"
+```
+
+### C++ methods and the 'this' object
+> You may want to retrieve a C++ method from one object and call it on a different object.
+
+在C++ 中类的方法带有隐式的this指针参数，是一个指向调用它的对象的指针常量。
+在QML中可以获取C++ method，然后让其他对象调用该method
+
+Invokable 类定义了一个给QML 调用的接口：invoke()， 在其中打印自身的objectName 
+``` cpp title=Inovkable
+class Invokable : public QObject {
+    Q_OBJECT
+    QML_ELEMENT
+public:
+    Invokable(QObject *parent = nullptr) : QObject(parent) {}
+    Q_INVOKABLE void invoke()
+    {
+        qDebug() << "invoked on" << objectName();
+    }
+};
+```
+
+使用：
+创建一个objectName 为parent的对象，parent 中定义同类型的 且 objectName 为child 的property。
+获取child的 invoke（）method，然后传递 parent 的this 作为 隐式的this参数 调用invoke，最终的结果应该打印parent 的objectName：parent
+``` js 
+    Invokable {
+        objectName: "parent"
+        property Invokable child: Invokable {}
+        Component.onCompleted: {
+            child.objectName = "child"
+            child.invoke.call(this)
+        }
+    }
+```
+js中function 是对象，通过call 可以指定this
+
+注意：原文档中 没有给child 设置objectName，所以其objectName 是空的“”、
+
+结果：
+``` title=output
+Calling C++ methods with 'this' objects different from the one they were retrieved from is broken, due to historical reasons. The original object is used as 'this' object. You can allow the given 'this' object to be used by setting 'pragma NativeMethodBehavior: AcceptThisObject'
+invoked on "child"
+```
+	由于调用方法的this 和 获取 method 的this 不一致，这里使用original object 作为this object，所以最后打印的objectName 是 child
+
+如果需要指定this 参数，通过提示进行设置
+设置：
+``` js
+pragma NativeMethodBehavior: AcceptThisObject
+```
+结果：
+``` title=output
+invoked on "parent"
+```
+
+
+## Exposing Signals
+> Any public signal of a QObject-derived type is accessible from QMLY code.
+> The QML engine automatically creates a signal handler for any signal of a QObject-derived type that is used from QML. Signal handler are always named on\<Signal> where \<Signal> is the name of the signal, with the first letter capitalized.
+
+在MessageBoard 中定义 newMessagePosted（）信号， emitSignal（）用于发射信号
+``` cpp
+public:
+    Q_INVOKABLE void emitSignal()
+    {
+        emit newMessagePosted("animal");
+    }
+
+signals:
+    void newMessagePosted(const QString &subject);
+```
+
+使用：
+``` js
+    MessageBoard {
+        onNewMessagePosted: (subject)=> console.log("New message received:", subject);
+        Component.onCompleted: {
+            this.emitSignal()
+        }
+    }
+```
+	
+结果：
+``` title=output
+qml: New message received: animal
+```
+
+注意：在构造函数中emit signal qml 中的handler 是收不到的，构造函数执行完毕后才会进行信号连接等工作
+
+### Multiple signals with same name
+> only the final signal is accessible as a QML signal. Note that signals with the same name but different parameters cannot be distinguished from one another.
+
+定义同名的signal，参数类型为int，并在参数类型string 的signal后定义。
+``` cpp
+public:
+    Q_INVOKABLE void emitSignal()
+    {
+        emit newMessagePosted("animal");
+        emit newMessagePosted(100);
+    }
+signals:
+    void newMessagePosted(const QString &subject);
+    void newMessagePosted(int i);
+```
+
+效果：
+``` 
+qml: New message received: 100
+```
