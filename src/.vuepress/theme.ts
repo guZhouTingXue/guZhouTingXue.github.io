@@ -12,12 +12,14 @@ export default hopeTheme({
   //站点图标
   //logo: "/awesomeface.png",
   favicon: "/awesomeface.png",
-  repo: "vuepress-theme-hope/vuepress-theme-hope",
+  //repo: "vuepress-theme-hope/vuepress-theme-hope", //项目连接
 
   docsDir: "src",
 
   // 导航栏
-  navbar: false,
+  navbar,//: true,
+	//主题切换
+	darkmode: "switch", //默认自动切换
 
   // 侧边栏
   sidebar,
@@ -35,7 +37,7 @@ export default hopeTheme({
     name: "明同学",
 	avatar: "/awesomeface.png",
     description: "student",
-    intro: "/intro.html",
+    intro: "/intro",
     medias: {
 	  discord: "https://discord.gg/VDDTk2cK",
     },
@@ -53,7 +55,7 @@ export default hopeTheme({
 
   // 多语言配置
   metaLocales: {
-    editLink: "在 GitHub 上编辑此页",
+    editLink: false//"在 GitHub 上编辑此页",
   },
 
   // 如果想要实时查看任何改变，启用它。注: 这对更新性能有很大负面影响
@@ -92,7 +94,15 @@ export default hopeTheme({
     tabs: true,
     tasklist: true,
     vPre: true,
-
+	//代码块设置
+	highlighter: {
+		notationDiff: true,
+		notationHighlight: true,
+		notationErrorLevel: true,
+		notationWordHighlight: true,
+		collapsedLines: true,
+	},
+	
     // 取消注释它们如果你需要 TeX 支持
     // math: {
     //   // 启用前安装 katex
@@ -118,7 +128,7 @@ export default hopeTheme({
     // flowchart: true,
 
     // 在启用之前安装 mermaid
-    // mermaid: true,
+     mermaid: true,
 
     // playground: {
     //   presets: ["ts", "vue"],
