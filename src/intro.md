@@ -1,2 +1,2 @@
 # Too Young Too Simple 
-some times naive
+sometimes naive
