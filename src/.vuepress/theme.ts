@@ -100,6 +100,7 @@ export default hopeTheme({
 		notationHighlight: true,
 		notationErrorLevel: true,
 		notationWordHighlight: true,
+		notationFocus: true,
 		collapsedLines: true,
 	},
 	

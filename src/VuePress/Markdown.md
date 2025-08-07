@@ -59,11 +59,21 @@ hopetheme({
 			notationHighlight: true,
 			notationErrorLevel: true,
 			notationWordHighlight: true,
+			notationFocus: true,
 			collapsedLines: true,
 		},
 	},
 )}
 ```
+### 聚焦
+``` js
+console.log(`1`);
+console.debug(`2`); // [!code focus]
+console.log(`3`);
+```
 
+| 行号  | 功能  | 语法             | 配置属性          |
+| --- | --- | -------------- | ------------- |
+| 2   | 聚焦  | \[!code focus] | notationFocus |
 ## 未归档
 表格：表格内换行 使用\<br>
