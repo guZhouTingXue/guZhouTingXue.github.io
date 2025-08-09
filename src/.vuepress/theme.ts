@@ -103,6 +103,8 @@ export default hopeTheme({
 		notationFocus: true,
 		collapsedLines: true,
 	},
+	//GFM 警告
+	alert: true,
 	
     // 取消注释它们如果你需要 TeX 支持
     // math: {
