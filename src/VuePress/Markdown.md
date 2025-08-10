@@ -48,7 +48,25 @@ int main()
 | 16    | 折叠   | :collapsed-lines<br>:no-collapsed-lines<br>:collapsed-lines=17 //从17行开始换行 | collapsedLines        |
 |       | 标题   | \`\`\`  cpp title="demo"                                                  |                       |
 
-问题：<mark style="background: #FFF3A3A6;">标题是不支持中文吗？</mark>
+问题：
+1. <mark style="background: #FFF3A3A6;">标题是不支持中文吗？</mark>; 
+2. 标题设置总是报错：
+![](./attachments/Markdown.webp)
+我的原文：
+![](./attachments/Markdown-1.webp)
+	编译为html 失败的原因是我多打了\” ？
+	查看二进制文件信息
+![](./attachments/Markdown-2.webp)
+	\“ 的值是0x22，0x0A 是换行，没有多打
+	搞不懂。。。
+发现原因了
+> 
+>设置代码块的标题时需要指定语言
+>使用txt title="frontmatter" 编译输出正常；
+>使用 \`\`\` title="frontmatter" 编译失败，
+>title 和前面的\` 没有间隔，也会编译失败
+
+。。。所以是obsidian 太强大了吗，在ob中都是正常的
 
 配置：
 ``` js title="theme.ts"
