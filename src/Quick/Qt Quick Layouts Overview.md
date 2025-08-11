@@ -1,3 +1,6 @@
+---
+category: Quick
+---
 
 
 # Qt Quick Layout Overview
@@ -286,6 +289,231 @@ won't trigger a layout rearrangement 的含义：改变layout 内 item 的width 
 > the layout might use the actual width and height - not the width and height specified in your QML file - when forced to do a full rebuild.
 
 ## Size constraints
+layout 内包含多个 设置了fill 的items 根据items的preferred 和 implicit size 按比例分配space。
+
+在一个RowLayout 内放置一个orange 和 一个 plum
+它们的属性值：
+
+|                | orange | plum |
+| -------------- | ------ | ---- |
+| minimumWidth   | 50     | 100  |
+| maximumWidth   | 100    |      |
+| preferredWidth | 100    | 200  |
+观察RowLayout 大小变化时orange 和 plum 的大小变换情况，初始window 大小为400
+实现：
+``` js
+   RowLayout {
+        id: layout
+        anchors.fill: parent
+        spacing: 6
+        Rectangle {
+            color: 'orange'
+            Layout.fillWidth: true
+            Layout.minimumWidth: 50
+            Layout.preferredWidth: 100
+            Layout.maximumWidth: 300
+            Layout.minimumHeight: 150
+            Text {
+                anchors.centerIn: parent
+                text: parent.width + 'x' + parent.height
+            }
+        }
+        Rectangle {
+            color: 'plum'
+            Layout.fillWidth: true
+            Layout.minimumWidth: 100
+            Layout.preferredWidth: 200
+            Layout.preferredHeight: 100
+            Text {
+                anchors.centerIn: parent
+                text: parent.width + 'x' + parent.height
+            }
+        }
+    }
+```
+
+效果：
+
+::: tabs
+
+@tab 初始
+
+![](./attachments/Qt%20Quick%20Layouts%20Overview-10.webp)
+
+@tab 最小宽度
+
+![](./attachments/Qt%20Quick%20Layouts%20Overview-11.webp)
+
+@tab 更宽
+![|416x188](./attachments/Qt%20Quick%20Layouts%20Overview-12.webp)
+:::
+
+以下值都是debug打印值
+spacing = 6
+
+| 状态  | window | orange | plum | plum.width  / orange.width | orange + plum + spacing |
+| --- | ------ | ------ | ---- | -------------------------- | ----------------------- |
+| 初始  | 400    | 131    | 263  | 2.00                       | 400                     |
+| 最小  | 122    | 50     | 100  | 2.00                       | 156                     |
+| 更宽  | 455    | 150    | 299  | 1.99                       | 455                     |
+plum的最小宽度实际上是比minimum 限制的宽度更小
+下面的图为显示宽度 = 实际宽度时状态
+![|146x189](./attachments/Qt%20Quick%20Layouts%20Overview-14.webp)
+	可以看到100X100
+
+总结：
+1. Layout 中有多个设置为fill 的item时，它们的大小保持 preferred 的比例
+2. 理论上Layout的size 范围应该是它管理的所有items 的综合结果
+
+|                               | minimum                                                                | preferred           | maximum           |
+| ----------------------------- | ---------------------------------------------------------------------- | ------------------- | ----------------- |
+| implicit constraints<br>width | orange.minimumWidth + plum.minimumWidth + spacing = 50 + 100  + 6= 156 | 100 + 200 + + = 306 | 200 + ∞ = ∞       |
+| height                        | max(150, 0, 0) (RowLayout不处理Vertical 方向) = 150                         | 按各自的preferred 显示    | max(150, 0) = 150 |
+在RowLayout 中 只计算max 、 min height，这里min 和 max 相等所以implicit preferred height 是150 
+
+## Connecting windows and layouts
+限制layout所在的windows 的大小
+
+1. 将window 的minimum、maximum width/height 绑定到Layout 的 min 、max width/height
+2. 将window 的初始大小（width/height）绑定到layout 的width/height
+
+实现：
+``` js
+   minimumWidth: layout.Layout.minimumWidth
+    minimumHeight: layout.Layout.minimumHeight
+    maximumWidth: 1000
+    maximumHeight: layout.Layout.maximumHeight
+
+    width: layout.implicitWidth
+    height: layout.implicitHeight
+```
+	3: 由于plum 没有限制最大width，手动设置Window的maximum 为1000
+ 效果：
+ ::: tabs
+ @tab 初始
+![](./attachments/Qt%20Quick%20Layouts%20Overview-13.webp)
+
+@tab 最小
+![](./attachments/Qt%20Quick%20Layouts%20Overview-15.webp)
+	
+:::
+
+## Spanning 
+使用GridLayout，演示columnSpan 属性含义
+
+实现：
+``` js
+    GridLayout {
+       rows: 2
+       columns: 3
+       anchors.fill: parent
+       Rectangle {
+           color: 'cyan'
+           implicitWidth: 50
+           implicitHeight: 50
+       }
+       Rectangle {
+           color: 'magenta'
+           implicitWidth: 50
+           implicitHeight: 50
+       }
+       Rectangle {
+           color: 'yellow'
+           implicitWidth: 50
+           implicitHeight: 50
+       }
+       Rectangle {
+           color: 'black'
+           implicitWidth: 50
+           implicitHeight: 50
+           Layout.columnSpan: 2
+           Layout.alignment: Qt.AlignHCenter
+       }
+    }
+```
+	columnSpan： 指定当前item在Layout 中跨越了几个item.(相当于设置item 的竖直中心位置？)
+
+
+效果：
+::: tabs
+@tab 初始
+![|195x214](./attachments/Qt%20Quick%20Layouts%20Overview-16.webp)
+@tab 改变window 大小后
+![](./attachments/Qt%20Quick%20Layouts%20Overview-17.webp)
+@tab span的含义
+修改：
+	columnSpan:3
+	 implicitWidth: 150
+![](./attachments/Qt%20Quick%20Layouts%20Overview-19.webp)
+
+:::
+
+1. 改变window，不会改变GridLayout 内items 的大小
+2. span：2时 黑色方块跨越第一排的前两个方块，span：3时跨越第一个排的3个方块
+
+
+
+## Stretching
+Layout中存在多个设置了fill的items 时，默认情况下分配空间时按照1：1的比例进行分配。可以通过stretching 控制分配的比例
+
+2行3列的GridLayout内存在cyan (青色)和 magenta(紫红色) ,它们的horizontalStretch 分别为1，2. 
+看起来分配额外空间时，它们的width 应该按照1：2 的比例进行拉伸
+实现：
+``` js
+    GridLayout {
+       rows: 2
+       columns: 3
+       anchors.fill: parent
+       Rectangle {
+           color: 'cyan'
+           implicitWidth: 50
+           implicitHeight: 50
+           Layout.fillWidth: true
+           Layout.horizontalStretchFactor: 1
+           onWidthChanged: console.debug('cyan width:' + width)
+       }
+       Rectangle {
+           color: 'magenta'
+           implicitWidth: 50
+           implicitHeight: 50
+           Layout.fillWidth: true
+           Layout.horizontalStretchFactor: 2
+           onWidthChanged: console.debug('magenta width:' + width)
+       }
+    }
+```
+
+效果：
+::: tabs 
+@tab 初始
+![](./attachments/Qt%20Quick%20Layouts%20Overview-18.webp)
+@tab 变化后
+![](./attachments/Qt%20Quick%20Layouts%20Overview-20.webp)
+
+:::
+
+宽度变化表
+
+| 状态  | cyan | magenta | window | 减去spacing、implicitWidth <br>后扩展的空间 (-106) | cyan 扩展 | magenta扩展 | 扩展比例(C/M) |
+| --- | ---- | ------- | ------ | ----------------------------------------- | ------- | --------- | --------- |
+| 1   | 0    | 0       | 300    |                                           |         |           |           |
+| 2   | 89   | 206     | 300    | 194                                       | 39      | 156       | 0.25      |
+| 3   | 91   | 215     | 311    | 205                                       | 41      | 165       | 0.24      |
+| 4   | 153  | 460     | 618    | 512                                       | 103     | 410       | 0.25      |
+
+cyan 和 magenta都是在50 的基础上扩展。
+如果按照设置的stretchFactor，那么扩展比例应该是1/2 = 0.5，但实际上是0.25 = 1/4
+
+GridLayout 的column 是3，但是这里只设置了2个item。
+问：<mark style="background: #FFF3A3A6;">即使magenta占据了空白的item，它的stretchFactor 是 2 + 1，那比例应该是1：3，为什么是4？</mark>
+
+从结果推断，分配空间时仍然计算了第3列的item。
+1. 每列的factor 分别是：1，3，1，计算出每列的扩展宽度。
+2. magenta span 2列，所以它的扩展的宽度应该是第2、3列之和
+
+>[!note]
+>我不确定实际实现是否如此，只是根据实际情况做出的合理推断
+>ChatGPT 解释设置columnSpan：1 后实际伸缩比列是1：2，但测试或Magenta仍填充全部剩余width
 
 
 

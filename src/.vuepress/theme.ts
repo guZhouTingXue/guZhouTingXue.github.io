@@ -4,15 +4,15 @@ import navbar from "./navbar.js";
 import sidebar from "./sidebar.js";
 
 export default hopeTheme({
-  hostname: "https://guzhoutingxue.github.io/",
+  hostname: "https://guzhoutingxue.github.io/", //当前网站部署到的域名
 
   author: {
     name: "mingStudent",
   },
-  //站点图标
-  //logo: "/awesomeface.png",
-  favicon: "/awesomeface.png",
-  //repo: "vuepress-theme-hope/vuepress-theme-hope", //项目连接
+  
+  //logo: "/awesomeface.png",	//导航栏图标(页面左上角)
+  favicon: "/awesomeface.png",   //站点图标
+  //repo: "vuepress-theme-hope/vuepress-theme-hope", //项目链接(点击“在github 编辑页面”时跳转的链接?) 
 
   docsDir: "src",
 

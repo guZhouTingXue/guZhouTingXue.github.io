@@ -119,5 +119,64 @@ markdown: {
 - caution
 - note
 
+
+
+## 选项卡
+多个卡片放置在一起，通过标题切换卡片
+
+配置：默认开启
+``` js title="themt.ts"
+markdown: {
+	tabs: true,
+},
+```
+
+示例：
+选项卡组1
+::: tabs#fruit
+@tab 开始 #1
+begin
+@tab:active 结束 #2
+end
+:::
+
+选项卡组2
+::: tabs#fruit
+@tab begin #1
+开始
+@tab:active end #2
+结束
+:::
+
+
+``` mk title="选项卡语法"
+选项卡组1
+::: tabs#fruit
+@tab 开始 #1
+begin
+@tab:active 结束 #2
+end
+:::
+
+选项卡组2
+::: tabs#fruit
+@tab begin #1
+开始
+@tab:active end #2
+结束
+:::
+```
+1. 创建容器：\:\:\: tabs, tabs 前有空格，\:\:\:  容器结束标志
+2. 创建选项卡：\@tab
+3. 卡片标题：\@tab 后设置标题
+4. 卡片内容：到下一个选项卡之间的内容就是当前卡片内容
+5. 容器id：在tabs 后使用 \#card，设置id 为card
+6. tab值：在tab 后使用#1，设置tab 值为1
+7. 默认tab：\@tab:active
+8. 多个卡组同步切换（卡组1从标题1切换到标题2，卡组2同步切换到2）
+	1. 两个卡组的id 相同
+	2. 卡组内tab 的值相同
+
+
 ## 未归档
 表格：表格内换行 使用\<br>
