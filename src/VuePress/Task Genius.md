@@ -6,6 +6,7 @@ category: VuePress
 # Task Genius
 >Comprehensive task management that includes progress bars, task cycling, and advanced task tracking features.
 
+[taskgenius.md](https://taskgenius.md/)
 <!-- more -->
 
 版本：9.4.0

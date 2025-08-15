@@ -11,5 +11,4 @@ footer:
 bgImage: /wallpaper.png
 bgImageDark: /darkWallpaper.png
 ---
-壁纸：[免费4K高清壁纸-电脑背景图片-Mac壁纸网站「哲风壁纸」](https://haowallpaper.com/)
-logo：LearnOpenGL
+
