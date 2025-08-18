@@ -66,13 +66,12 @@ Community plugins-> DISPLAY & PROGRESS -> Checkbox Status
 
 
 ## Habits
-habits 被关联到了daily note
+habits 被关联到了daily note，在daily one 中编辑habits
 
 入口：
 ![](./attachments/Task%20Genius-4.webp)
 ### habit types
 ![|536x213](./attachments/Task%20Genius-5.webp)
-
 ### Daily habit
 1. create a daily habit
 ![|542x308](./attachments/Task%20Genius-6.webp)
