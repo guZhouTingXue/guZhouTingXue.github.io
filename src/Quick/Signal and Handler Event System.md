@@ -164,6 +164,14 @@ qml: column: 5
 | 11  | 从button 接收信号 |                                 |
 | 12  | 定义handler    | 函数命名和在button内响应相同，都是on\<Signal> |
 
+
+> [!note]
+>在Connections 中 使用onSignal 隐式地连接信号已经被废弃（不明确），需要显式使用function onSignal()。编译器会报错：
+
+``` txt
+ QML Connections: Implicitly defined onFoo properties in Connections are deprecated. Use this syntax instead: function onFoo(<arguments>) { ... }
+```
+	一些示例中仍使用已经废弃的方法连接。
 ### Attached signal handlers
 >An attached signal handler receives a signal from an attaching type rather than the object within which the handler is declared.
 

@@ -91,3 +91,21 @@ tbranch2 右键菜单，选择Merge into 'main'...
 
 最终效果：
 ![](./attachments/git-8.webp)
+
+
+
+## 在指定版本上创建分支
+``` mermaid
+gitGraph
+	commit 
+	commit
+```
+当前有一个main 分支，两个版本，head 指向main最后提交的版本（节点），需要在第一个节点上创建分支。
+
+:::tabs
+@tab Sourcetree
+选中节点-》分支
+![|422x170](./attachments/git-9.webp)
+	选择创建新分支的提交
+:::
+

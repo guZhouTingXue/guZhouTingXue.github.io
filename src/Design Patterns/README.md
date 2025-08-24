@@ -17,6 +17,6 @@ category: DesignPatterns
 - relations with other patterns：模式之间的区别与联系
 - code examples：各种语言实现示例
 
-纸质书：
-## 流程
+[图说设计模式](https://design-patterns.readthedocs.io/zh-cn/latest/index.html)
 
+纸质书：Head First 设计模式
