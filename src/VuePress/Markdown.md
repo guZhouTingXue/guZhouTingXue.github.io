@@ -1,3 +1,9 @@
+---
+category: VuePress
+tags:
+  - markdown
+---
+
 # Markdown
 推荐的文档结构：
 ``` markdown

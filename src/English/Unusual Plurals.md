@@ -31,5 +31,23 @@ man->men
 
 autumn leaves and sharp knives.
 
+> Another way to make plurals in English is to add the suffix -en
+
+brother -> brethren
+child -> children
+ox->oxen
+
+## Words of foreign origin
+from Latin
+> Words that end in -us drop that ending and add -i to become plural
+
+fungus -> fungi 真菌 （如蘑菇）
+cactus -> cacti 仙人掌
+
+> For words that end in -um, the ending changes to -a
+
+datum -> data
+medium -> media
+
 
 
