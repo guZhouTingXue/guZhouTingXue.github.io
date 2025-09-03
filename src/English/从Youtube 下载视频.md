@@ -5,6 +5,8 @@ category: English
 # 从Youtube 下载视频
 1. 复制要下载的YouTube 视频网址
 打开：[ 下载youtube视频](https://snapany.com/zh/youtube)
+[免费在线YouTube视频下载器（1080p & 4k） - DLBunny](https://www.dlbunny.com/zh-CN/youtube)
+
 把网址贴到编辑栏，提取视频
 ![|515x214](./attachments/从Youtube%20下载视频.webp)
 2. 下载：分别下载视频、音频到本地同一路径下
@@ -15,6 +17,6 @@ category: English
 ![](./attachments/从Youtube%20下载视频-1.webp)
 
 ## 其他说明
-1. 一个系列中的每个视频链接除了index 序号不同，其余部分也有区别；
+1. youtube中一个系列中的每个视频链接除了index 序号不同，其余部分也有区别；
 2. 使用IDM 下载大量视频时可以单独建立分类
 

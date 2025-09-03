@@ -5,7 +5,7 @@ tags:
 ---
 # Flowchart
 各种形状的节点表示处理对象、处理过程、处理结果等
-
+类型：graph TD
 ## 基本流程图要素
 ``` mermaid
 graph TD
