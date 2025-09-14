@@ -9,4 +9,4 @@ category: IEC 60870-5-104
 
 
 ## CP24Time2a
-![](./attachments/Time%20tag-1.webp)
+![|427x190](./attachments/Time%20tag-1.webp)
