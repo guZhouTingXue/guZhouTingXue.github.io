@@ -5,7 +5,7 @@ category: English
 # When Nouns Act Like Adjectives
 [mp3](/resources/English/when-nouns-act-like-adjectives.mp3)
 [pdf](/resources/English/When-Nouns-Act-Like-Adjectives.pdf)
-[字幕](/resources/English/When-Nouns-Act-Like-Adjectives.pdf)
+[字幕](/resources/English/when-nouns-act-like-adjectives.en.srt)
 
 
 ## words in this story

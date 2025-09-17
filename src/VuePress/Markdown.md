@@ -125,6 +125,7 @@ markdown: {
 - caution
 - note
 
+问：<mark style="background: #FFF3A3A6;">不支持quote，该如何添加支持类型？</mark>
 
 
 ## 选项卡
