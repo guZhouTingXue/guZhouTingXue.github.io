@@ -1,0 +1,80 @@
+---
+category: LearnOpenGL
+---
+
+# OpenGL
+> The OpenGL specification specifies exactly what the result/output of each function should be and how it should perform.
+
+OpenGL 是由 [The Khronos Group](https://www.khronos.org/)制定并维护的规范。规范指定了function 的接口形式以及功能，具体的函数实现由库的提供者完成，规范不作限制。
+
+## Core-profile vs Immediate mode
+
+| mode                                    | 特点                                | 版本      |
+| --------------------------------------- | --------------------------------- | ------- |
+| immediate mode（fixed function pipeline） | easy-to-use method                | 0.0~3.2 |
+| core-profile                            | 灵活（more control over graphics）、高效 | 3.3~now |
+
+## Extensions
+OpenGL 支持扩展，任何显卡厂商的特有技术都可以通过扩展进行使用。
+
+## State machine
+>[!quote]
+>OpenGL is by itself a large state machine: a collection of variables that define how OpenGL should currently operate. The state of OpenGL is commonly referred to as the OpenGL context.
+
+由绘制triangles 更改为绘制 lines：修改当前状态，调用绘制函数
+- 绘制的形状由一个状态控制
+- 状态更新后在下次使用时生效
+- 要在多个状态下绘制时需要在状态之间进行切换
+
+## Objects
+>[!quote]
+>An object in OpenGL is a collection of options that represents a subset of OpenGL's state.
+
+OpenGL 库是用C编写的，将一组关联的状态提取出来组成一个对象，每次操作都是针对单个对象（一组状态），方便设置。
+对象相当于是C中的结构体
+整个OpenGL的所有状态就是对象的集合
+关系：对象是状态的集合-》context 是对象的集合
+c代码近似：
+``` cpp
+struct object_name {
+	float option1;
+	int option2;
+};
+
+//The State of OpenGL
+struct OpenGL_Context {
+	//...
+	object_name *object_Window_Target;
+	//...
+};
+```
+
+使用OpenGL绘制一个窗口的步骤：
+1. 创建一个窗口对象
+2. 设置对象的参数
+3. 绑定到OpenGL中
+4. 绘制
+5. 恢复默认
+实现：
+``` cpp
+// create object
+unsigned int objectId = 0;
+glGenObject(1, &objectId);
+// bind/assign object to context
+glBindObject(GL_WINDOW_TARGET, objectId);
+// set options of object currently bound to GL_WINDOW_TARGET
+glSetObjectOption(GL_WINDOW_TARGET, GL_OPTION_WINDOW_WIDTH,  800);
+glSetObjectOption(GL_WINDOW_TARGET, GL_OPTION_WINDOW_HEIGHT, 600);
+// set context target back to default
+glBindObject(GL_WINDOW_TARGET, 0);
+```
+
+| 行号  | 功能       | 说明                                                                |
+| --- | -------- | ----------------------------------------------------------------- |
+| 1、2 | 创建object | the real object's data is stored behind the scenes.通过id引用该object。 |
+| 5   | 绑定object | bind 相当于替换（所以如果要在两个object之间切换需要同时保存它们的object，否则只能恢复到默认状态）         |
+| 7、8 | 设置窗口宽、高  | 没办法直接设置object的值，object 的具体定义对用户是隐藏的，具体的实现在源文件中，头文件只提供了操作的接口声明。    |
+| 10  | 恢复默认     |                                                                   |
+
+
+

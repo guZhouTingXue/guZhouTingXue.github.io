@@ -30,3 +30,91 @@ ob中链接格式是wiki，vuepress 的markdown不支持，无法显示该格式
 ![](./attachments/使用Obsidian%20作为本地文档工具-1.png)
 4. 修改已经存在的wiki 格式链接：删除原链接文件，拖拽链接到原位置
 
+
+## 模板的使用
+>[!quote]
+>Templates is a [core plugin](https://help.obsidian.md/plugins) that lets you insert pre-defined snippets of text into your active note.
+
+- pre-defined snippets of text
+- insert into your active note
+### 配置
+打开设置-》core plugins -》 Templates
+![](./attachments/Obsidian-1.webp)
+设置放置模板文件的路径
+
+### 定义模板
+在设置的模板路径先新建模板文件
+
+#### Template variables
+>[!quote]
+>You can add dynamic information to your templates, using template variables. When you insert a template containing a template variable, Templates replaces it with its corresponding value.
+
+让模板的内容根据导入文章的内容变化（自动适应）
+示例：
+模板内容：
+``` md
+时间：{{data}}
+```
+导入到今天2025.9.22创建的文章中
+``` md title="test.md"
+测试
+```
+导入后
+``` md title="test.md"
+测试
+时间：2025-09-22 
+```
+
+可以在Templates 的设置中修改date 的格式
+
+支持的template variables
+
+| Variable  | Description              |     |
+| --------- | ------------------------ | --- |
+| {{title}} | Title of the active note |     |
+| {{date}}  | Today's date             |     |
+| {{time}}  | Current time             |     |
+
+#### Template properties
+在tempalte 中定义的properties 会合并到active note中。如示例中template 有 category 属性，insert 后 active note 新增该property
+
+### 导入模板
+打开要导入模板的文章
+通过左侧的工具栏中的 insert template 选择要导入的模板文件
+![](./attachments/Obsidian.webp)
+点击按钮后出现模板文件列表，选择模板。模板内容导入到当前编辑位置后。
+
+### 示例
+模板文件内容：
+``` md
+---
+category: Daily
+---
+
+这是一个模板文件
+## 待办
+- [ ] 购物
+```
+
+active note：
+``` md
+---
+标题:
+---
+
+心情：好
+```
+
+导入后：
+``` md
+---
+标题:
+category: Daily
+---
+
+心情：好
+这是一个模板文件
+## 待办
+- [ ] 购物
+```
+

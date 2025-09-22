@@ -1,3 +1,6 @@
+---
+category: C++Primer
+---
 
 
 # Object lifetime and resource management
