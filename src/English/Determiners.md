@@ -21,3 +21,23 @@ Determiners 的定义及所有种类
 与名词的搭配关系
 与形容词区别
 
+
+| 类型                                | 包含                                                                      | 中文名称        | 别称       |
+| --------------------------------- | ----------------------------------------------------------------------- | ----------- | -------- |
+| Articles                          | a/an, the, zero article                                                 | 冠词          |          |
+| Possessive Determiners            | my, your, his, her, its, our, your, their                               | 物主限定词       | 形容词性物主代词 |
+| Demonstrative Determiners         | this, that, these, those, such                                          |             |          |
+| Indefinite Determiners            |                                                                         | 不定限定词       | 形容词性不定代词 |
+| Universal Determiners             | all, both, each, every                                                  | 通用          |          |
+| Assertive Determiners             | some, certain                                                           | 肯定          |          |
+| Non-assertive Determiners         | any, either                                                             | 非肯定         |          |
+| Negative Determiners              | no, neither, nor                                                        | 否定          |          |
+| Quantitative Determiners          | enough, few, a few(of), (a) little (of), many (of), much (of), more,... | 量词          |          |
+| Noun Genitive                     | -'s                                                                     | 名词所有格       |          |
+| Cardinal Numerals                 | one, two, three, etc.                                                   | 基数词         |          |
+| Ordinal Numerals                  | first, second, third, etc.                                              | 序数词         |          |
+| General Ordinals                  | last, next, additional, another, other, further, past, etc.             | 通用序数词       |          |
+| Open-class Quantifiers            | a bit of, a good deal of                                                | 开放性量词       |          |
+| Interrogative Determiners         | what(ever), which(ever), whose, whoever                                 | 疑问（还有链接、关系） |          |
+| The multipliers and the Fractions | double, twice, treble, three times; one-third, three-fourths, etc.      | 表示倍数和分数的词   |          |
+

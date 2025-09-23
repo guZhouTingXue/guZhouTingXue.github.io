@@ -1,0 +1,232 @@
+---
+category: LearnOpenGL
+---
+# Hello Window
+
+@startmindmap
+* Hello window
+	* 前置：构建工程，链接glfw库、添加了glad相关文件
+	* 添加头文件：glad在glfw前
+	* GLFW
+		* initialize GLFW
+		* configure GLFW
+			* OpenGL version
+			* core-profile
+		* create a window object
+		* set context on current thread
+	* GLAD
+		* initialize GLAD
+	* Viewport
+	* Ready engines
+		* render loop
+		* double buffer
+	* clean/delete resources
+	* input
+	* Rendering
+
+@endmindmap
+
+
+## GLFW
+初始化及设置OpenGL 版本、mode
+实现：
+``` cpp
+    glfwInit();
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
+    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+```
+
+| 行号  | 功能            | 说明                                                                           |
+| --- | ------------- | ---------------------------------------------------------------------------- |
+| 1   | 初始化           | 初始化后才可以对glfw 进行配置                                                            |
+| 2、3 | 使用的OpenGL版本设置 | 如果显卡驱动的openGL版本不正确，glfw 无法运行                                                 |
+| 4   | 设置使用核心模式      | compatible 模式下包含了所有旧版本features，包括当前版本已经废弃的。设置core profile 表明不需要使用废弃的featrues |
+
+### create window object
+实现：
+``` cpp
+GLFWwindow* window = glfwCreateWindow(800, 600, "LearnOpenGL", NULL, NULL);
+if (window == NULL)
+{
+    std::cout << "Failed to create GLFW window" << std::endl;
+    glfwTerminate();
+    return -1;
+}
+glfwMakeContextCurrent(window);
+```
+
+| 行号  | 功能                                    | 说明                                                                                                                            |
+| --- | ------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| 1   | 创建窗口对象                                | 800，600为窗口宽、高；“LearnOpenGL”为窗口的标题；后面两个参数暂时忽略                                                                                  |
+| 5   | 释放前面init（）获取的资源                       |                                                                                                                               |
+| 8   | 将当前线程使用的context 设置为 window 关联的context | context 即State machine。opengl 基于context。设置了线程使用的context，后续对state 的修改在当前context上应用。如果线程没有设置使用context，无法进行绘制。一个线程只能设置一个context。 |
+
+## GLAD
+>[!quote]
+>GLAD manages function pointers for OpenGL so we want to initialize GLAD before we call any OpenGL function.
+
+GLAD 定义了要使用到的OpenGL函数指针，如：
+``` cpp title="glad.h"
+typedef void (APIENTRYP PFNGLGENBUFFERSPROC)(GLsizei n, GLuint *buffers);
+GLAPI PFNGLGENBUFFERSPROC glad_glGenBuffers;
+#define glGenBuffers glad_glGenBuffers
+```
+
+| 行号  | 功能                            | 说明                        |
+| --- | ----------------------------- | ------------------------- |
+| 1   | 定义函数指针                        | 指针名称为PFNGLGENBUFFERSPROC  |
+| 2   | 定义函数指针对象                      | 对象名称为glad_glGenBuffers    |
+| 3   | 宏定义，将glGenBuffers替换为 前面的指针对象名 | 应用程序中使用glGenBuffers（）进行调用 |
+要通过glad 调用需要先获取到函数地址（给函数指针对象赋值）
+
+获取函数地址的实现：
+``` cpp
+    if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
+    {
+        std::cout << "Failed to initialize GLAD" << std::endl;
+        return -1;
+    }
+```
+
+glfwGetProcAddress: 是一个跨平台包装函数，根据实际运行的平台调用对应平台的函数。它用来获取函数地址
+gladLoadGLLoader：根据当前openGL版本及配置传递要使用的函数名称给glfwGetProcAddress，获取地址后赋值为函数指针对象
+
+
+## Viewport
+>[!quote]
+>tell OpenGL the size of rendering window
+
+GLFW window：系统创建的窗口，由系统绘制标题栏、边框
+rendering window：渲染的区域，opengl 的内容在该区域内进行绘制
+
+实现：
+``` cpp
+   glViewport(0, 0, 800, 600);
+```
+
+函数原型：
+``` cpp
+void glViewport(	GLint x,
+ 	GLint y,
+ 	GLsizei width,
+ 	GLsizei height);
+```
+x、y：rendering window 左上角在 GLFW window 中的坐标
+width、height：rendering window 的大小
+
+2D coordinates：opengl 中的坐标点的值范围是\[-1,1]
+screen coordinates: 屏幕坐标，由显示器决定，单位为像素
+
+实际rendering 时需要将 coordinates in OpenGL transform to screen coordinates。
+
+### 让rendering window 适应GLFW window
+实现：
+``` cpp
+void framebuffer_size_callback(GLFWwindow* window, int width, int height);
+int main()
+{
+	//...
+    if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
+		;
+	glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
+	//...
+}
+void framebuffer_size_callback(GLFWwindow* window, int width, int height)
+{
+    glViewport(0, 0, width, height);
+}
+```
+
+| 行号    | 功能                             | 说明  |
+| ----- | ------------------------------ | --- |
+| 7     | 设置GLFW window 窗口大小发生变化时的回调处理函数 |     |
+| 10-13 | 根据GLFW window 大小设置Viewport     |     |
+
+## Ready Engines
+为了维持窗口（keep drawing images）及管理用户输入（键盘、鼠标），需要一个循环（render loop），在循环内处理输入。
+
+实现：
+``` cpp
+while(!glfwWindowShouldClose(window))
+{
+    glfwSwapBuffers(window);
+    glfwPollEvents();    
+}
+```
+
+| 行号  | 功能                    | 说明                |
+| --- | --------------------- | ----------------- |
+| 1   | 点击标题栏x按钮关闭glfw window |                   |
+| 3   | 交换缓冲                  | Double buffer     |
+| 4   | 获取用户输入                | 直接处理或调用回调函数处理用户输入 |
+### Double buffer
+>[!quote]
+>When an application draws in a single buffer the resulting image may display flickering issues. This is because the resulting output image is not drawing in an instant, but drawn pixel by pixel and usually from left to right and top to bottom.
+
+显示器的绘制原理：实际上是逐行扫描，每一行又是pixel by pixel，从左到右进行的。如果只有一个buffer 存放显示数据（渲染、显示使用同一buffer），buffer 修改后，从当前正在扫描处开始更新显示。那么在扫描所有修改内容前，同时存在之前的图像和修改后图像（tearing）
+采用双缓冲，front buffer contains the final output image that is shown at the scree。渲染只修改back buffer，在渲染完成后swap the back buffer to the front buffer，保证下次重新扫描时显示更新后图像。
+
+扫描周期 = 1 / 刷新率
+如果在扫描期间交换缓冲，仍然会有tearing。
+垂直同步：保证交换缓冲发生在扫描间隙（上一帧扫描完成，下一帧扫描开始前）内。
+垂直同步 + 双缓冲保证了只会显示最新内容。
+
+
+## One last thing
+程序退出前回收资源
+``` cpp
+    glfwTerminate();
+    return 0;
+```
+
+
+## window 启动！
+![](./attachments/Hello%20Window.webp)
+
+
+## input
+处理按键输入
+实现：
+``` cpp
+void processInput(GLFWwindow *window)
+{
+    if(glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
+        glfwSetWindowShouldClose(window, true);
+}
+while (!glfwWindowShouldClose(window))
+{
+    processInput(window);
+
+    glfwSwapBuffers(window);
+    glfwPollEvents();
+} 
+
+```
+
+| 行号  | 功能           | 说明                                                                                                            |
+| --- | ------------ | ------------------------------------------------------------------------------------------------------------- |
+| 1-5 | 按下esc按键后关闭窗口 | GLFW_KEY_ESCAPE 按键值得宏定义 GLFW_PRESS：按下状态                                                                       |
+| 8   | 调用按键处理函数     | 和窗口大小发生变化使用回到处理不同，每一帧中主动调用按键处理。如果使用回调机制，要在当前帧绘制完成后调用pollevents（）进行，循环内，swap buffer前主动调用处理函数保证按键响应可以应用到当前帧绘制前。 |
+
+问：<mark style="background: #FFF3A3A6;">关于按键处理为什么用轮询 而不是回调</mark>
+感觉不是很清楚，主动查询当前按键状态 和 事件分发处理时根据按键事件判断按键状态 我感觉没有区别。我觉得就是和调用的先后（时间）有关系。
+
+## Rendering
+render loop 的处理流程：
+input -> render -> swap -> pollevents
+
+修改颜色
+实现：
+``` cpp
+	glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
+	glClear(GL_COLOR_BUFFER_BIT);
+```
+
+| 行号  | 功能             | 说明                            |
+| --- | -------------- | ----------------------------- |
+| 1   | 设置要显示的颜色       | 设置color buffers 被clear 后使用的颜色 |
+| 2   | 清除clolr buffer |                               |
+
+效果：
+![](./attachments/Hello%20Window-1.webp)

@@ -2,7 +2,7 @@
 category: DesignPatterns
 ---
 
-# 说明
+# Design Patterns
 
 参考教程：
 [重构大师](https://refactoring.guru/design-patterns/catalog?_gl=1*1aybz2x*_ga*MTI1ODAzODczNC4xNzMwNDc0Mjcy*_ga_SR8Y3GYQYC*czE3NTQ3NDc4NzgkbzM2JGcwJHQxNzU0NzQ3ODc4JGo2MCRsMCRoMA..)：包含23种设计模式。每种模式的介绍结构：
