@@ -79,7 +79,7 @@ JAVA中接口不能继承，C++中接口（抽象类）可以继承。在JAVA中
 
 
 ## 重新设计鸭子
-实现的鸭子是笼统的鸭子，只有具有鸭子的外观，其余部分没有要求。
+实现的鸭子是笼统的鸭子，只具有鸭子的外观，其余部分没有要求。
 分离变化的部分：将fly 和 quack 放到单独的类中，通过它们提供的接口实行具体的行为。
 接口是不变的，但是具体的实现是可变的。
 
@@ -138,20 +138,22 @@ animal->makeSound();
 classDiagram
 	class Duck {
 		FlyBehavior flybehavior
-		QuackBehavior quackBehavior
 		display()
 		performFly()
+		setFlyBehavior()
 	}
 	Duck <|-- MallarDuck
 	Duck <|-- RedheadDuck
 
 	class FlyBehavior { <<Interface>>
+		fly()
 	}
 	FlyBehavior <|.. FlyWithWings
+	FlyWithWings: fly()
 	FlyBehavior <|.. FlyNoWay
+	FlyNoWay: fly()
 	FlyBehavior <-- Duck
 ```
-
 
 ### 策略模式的定义
 >[!quote]
@@ -160,4 +162,107 @@ classDiagram
 
 
 
+## 实现
+算法-封装飞行行为
+``` cpp 
+class FlyBehavior {
+public:
+    virtual ~FlyBehavior() = default;
+    virtual void fly() = 0;
+};
+
+```
+
+| 行号  | 功能       | 说明                                      |
+| --- | -------- | --------------------------------------- |
+| 3   | 释放基类资源   | 基类析构通常定义为虚函数，保证基类的资源能够被释放               |
+| 4   | 飞行行为接口定义 | 算法（功能）调用的接口定义，=0 纯虚函数，让FlyBehavior 为抽象类 |
+
+具体算法（飞行行为）的实现
+``` cpp
+class FlyWithWings : public FlyBehavior{
+public:
+    void fly() override {
+        cout << "wing wing" << endl;
+    }
+};
+
+class FlyNoWay : public FlyBehavior {
+public:
+    void fly() override {
+        cout << "noway" << endl;
+    }
+};
+```
+
+| 行号  | 功能   | 说明  |
+| --- | ---- | --- |
+| 1   | 继承接口 |     |
+| 3-5 | 实现接口 |     |
+
+能够飞（使用算法）的Duck（客户）
+``` cpp
+class Duck {
+private:
+    std::unique_ptr<FlyBehavior> flyBehavior_;
+public:
+    explicit Duck(std::unique_ptr<FlyBehavior> &&fb)
+        : flyBehavior_(std::move(fb))
+    {
+    }
+	virtual ~Duck() = default;
+    void setFlyBehavior(std::unique_ptr<FlyBehavior> &&fb)
+    {
+        flyBehavior_ = std::move(fb);
+    }
+    void performFly()
+    {
+        if(flyBehavior_)
+            flyBehavior_->fly();
+        else
+            cout << "flyBehavior isn't set" << endl;
+    }
+};
+```
+
+| 行号    | 功能           | 说明                                       |
+| ----- | ------------ | ---------------------------------------- |
+| 3     | 使用指针指针管理飞行行为 | 多态必须通过指针或引用实现；因为不需要共享行为所以使用unique_ptr    |
+| 5-8   | 构造           | unique_ptr 只能移动，参数为右值引用类型，实参只能是右值或移动后的左值 |
+| 10-13 | 修改飞行行为       | 提供动态修改算法的接口                              |
+| 13-19 | 飞飞飞          | 执行算法                                     |
+
+具体的Duck 类
+``` cpp
+class RubberDuck : public Duck {
+public:
+    explicit RubberDuck()
+        : Duck(std::make_unique<FlyNoWay>())
+    {}
+};
+
+class RedheadDuck : public Duck {
+public:
+    explicit RedheadDuck()
+        : Duck(std::make_unique<FlyWithWings>())
+    {}
+};
+```
+橡皮鸭不会飞，使用FlyNoWay 作为飞行行为。
+红头鸭用羽毛飞，使用FlyWithWings作为飞行行为
+
+测试：
+``` cpp
+    RubberDuck rubber;
+    rubber.performFly();
+
+    RedheadDuck redhead;
+    redhead.performFly();
+```
+
+效果：
+``` 
+noway
+wing wing
+```
 
