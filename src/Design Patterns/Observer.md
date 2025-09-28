@@ -366,3 +366,159 @@ Avg temperature: 3.86
 Avg temperature: 2.90667
 ```
 
+## “推” 或 “拉”
+### ”推“
+气象监测应用中WeaterData 检测到数据变换后将气象数据全部推送给布告板。推送的数据包含所有气象监测内容，即使该数据布告板不会显示（不需要），也会接收。
+
+### ”拉“
+观察者种类繁多，需求各不相同。主题可以只发通知，并提供数据获取接口，让观察者在收到更新通知后自主获取需要的数据。
+
+
+## Java 内置的观察者模式
+使用java 内置观察者模式实现气象监测应用的类图：
+``` mermaid
+classDiagram
+    class Observable {
+        addObserver()
+        deleteObserver()
+        notifyObservers()
+        setChanged()
+    }
+
+    class WeaterData {
+        getTemperature()
+        getHumidity()
+        getPressure()
+    }
+    Observable <|-- WeaterData
+
+    class Observer {
+        <<interface>>
+        update()
+    }
+    Observable "1" --> "many" Observer
+    class DisplayElement {
+        <<interface>>
+        display()
+    }
+    class GeneralDisplay {
+        update()
+        display()
+    }
+    Observer <|.. GeneralDisplay
+    DisplayElement <|.. GeneralDisplay
+    GeneralDisplay  -->  Observable
+```
+
+| 序号  | 区别                            | 说明                                                                                    |
+| --- | ----------------------------- | ------------------------------------------------------------------------------------- |
+| 1   | 主题不再是interface，而是类            | 在Observable 中实现和Observer相关所有的方法，子类不再管理Observer                                        |
+| 2   | Observable 中增加了一个setChanged（） | 主题增加一个状态属性，用于控制通知的频率。比如气象站数据变化十分频繁 或者 精度太高（0.01°），希望控制通知的间隔时间 或者 满足变化要求（温度变化1°）后再进行通知 |
+
+### 实现
+
+``` cpp title="subject.h"
+    void notifyObservers(void *arg);
+    void notifyObservers()
+    {
+        notifyObservers(nullptr);
+    }
+    void setChanged() {
+        m_changed = true;
+    }
+protected:
+    std::list<Observer*> m_observers;
+    bool m_changed = false;
+};
+```
+
+| 行号  | 功能         | 说明                |
+| --- | ---------- | ----------------- |
+| 1   | 附带额外参数的通知  |                   |
+| 2-5 | 不带额外参数的通知  | 将参数设置为空，然后调用带参数版本 |
+| 6-8 | 修改状态为已发生变化 |                   |
+| 11  | 变换状态属性定义   |                   |
+``` cpp title="subject.cpp"
+void Observable::notifyObservers(void *arg)
+{
+    if(m_changed)
+    {
+        for(auto o : m_observers)
+            o->update(this, arg);
+        m_changed = false;
+    }
+}
+```
+
+| 行号  | 功能                 | 说明  |
+| --- | ------------------ | --- |
+| 3   | 发生状态变化时通知observers |     |
+| 7   | 还原状态               |     |
+
+``` cpp title="WeaterData"
+    void measurementsChanged()  
+    {  
+        setChanged();  
+        std::string msg("hello");  
+        notifyObservers((void*)&msg);  
+    }
+```
+
+| 行号  | 功能    | 说明  |
+| --- | ----- | --- |
+| 3   | 先设置状态 |     |
+| 5   | 传递msg |     |
+
+``` cpp title="Observer.h"
+class Observer {  
+public:  
+    virtual void update(Observable *o, void* arg) = 0;  
+};
+```
+
+| 行号  | 功能       | 说明                                                             |
+| --- | -------- | -------------------------------------------------------------- |
+| 3   | 更新状态接口定义 | Observable参数用来获取实际的Subject，然后再从Subject提供的接口获取自身需要参数，arg传递额外的参数 |
+
+``` cpp title="Observer.cpp"
+void CurrentConditionsPlay::update(Observable *o, void *arg)  
+{  
+    auto weaterData = dynamic_cast<WeaterData*>(o);  
+    std::string *msg = static_cast<std::string*>(arg);  
+    if(weaterData && msg)  
+    {  
+        m_temperature = weaterData->getTemperature();  
+        m_humidity = weaterData->getHumidity();  
+        std::cout << "msg:" << *msg << std::endl;  
+        display();  
+    }  
+}
+```
+
+| 行号   | 功能                  | 说明                  |
+| ---- | ------------------- | ------------------- |
+| 3    | 动态类型转换              | 参数实际类型要求为WeaterData |
+| 4    | 获取额外参数              |                     |
+| 5-11 | 通过WeaterDate 接口获取参数 |                     |
+
+### 测试
+main 代码和前面一致
+效果：
+``` 
+msg:hello
+current temperature:3.14 humidity:1.24
+msg:hello
+Avg temperature: 3.14
+msg:hello
+current temperature:4.58 humidity:0.12
+msg:hello
+Avg temperature: 3.86
+
+msg:hello
+Avg temperature: 2.90667
+```
+
+>[!note]
+>没有使用java 测试，不清楚qt 是否和java 一样。但是代码不要依赖观察者被通知的次序
+
+
