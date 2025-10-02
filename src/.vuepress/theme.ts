@@ -105,6 +105,7 @@ export default hopeTheme({
 	},
 	//GFM 警告
 	alert: true,
+	preview: true, //预览
 	
     // 取消注释它们如果你需要 TeX 支持
     // math: {
@@ -124,8 +125,8 @@ export default hopeTheme({
 
     // insert component easily
 
-    // 在启用之前安装 echarts
-    // echarts: true,
+    // 在启用之前安装 echarts npm install -D echarts
+    echarts: true,
 
     // 在启用之前安装 flowchart.ts
     // flowchart: true,

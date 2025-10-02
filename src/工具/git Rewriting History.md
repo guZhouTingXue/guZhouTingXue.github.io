@@ -77,9 +77,9 @@ Once you are satisfied with your changes, run
 HEAD指向2
 ![](./attachments/git%20Rewriting%20History-1.webp)
 3. 修改文件：将2.txt 内容修正为222
-4. 提交信息：
+4. 暂存后提交：
 ![](./attachments/git%20Rewriting%20History-2.webp)
-	保留之前的体检信息 或 进行修正
+	保留之前的提交信息 或 对其进行修正
 5. 完成变基：进行amend后会弹出提示，点击继续变基
 ![](./attachments/git%20Rewriting%20History-3.webp)
 6. 结果：

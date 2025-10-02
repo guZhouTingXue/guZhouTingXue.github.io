@@ -184,6 +184,26 @@ end
 	1. 两个卡组的id 相同
 	2. 卡组内tab 的值相同
 
+## 预览
+展示显示效果，折叠代码实现
+配置：
+``` js title="theme.ts"
+export default hopeTheme({
+  markdown: {
+    preview: true,
+  },
+});
+```
 
+**示例**
+::: preview 可选标题
+``` txt
+\::: preview 可选标题
+内容
+\:::
+```
+:::
+
+。。。问题：<mark style="background: #FFF3A3A6;">在代码块中的\::: 会匹配到代码块外的::: </mark>
 ## 未归档
 表格：表格内换行 使用\<br>

@@ -8,6 +8,12 @@ tags:
 版本控制工具
 [Git - Downloads](https://git-scm.com/downloads)
 
+
+## 目录
+
+[git Rewriting History](git%20Rewriting%20History.md)
+
+
 ## What is Git？
 
 | 特性                              | 内容                                                                                                                                                                             |
@@ -17,10 +23,6 @@ tags:
 | Git Has Integrity               | "Everything in Git is checksummed before it is stored and is then referred to by that checksum"<br>"calculated based on the contents of a file or directory  structure in Git" |
 | Git Generally Only Adds Data    | 所有的操作都会进行记录，可以尽情操作，不用担心数据丢失的问题                                                                                                                                                 |
 | The Three States                | git 管理的文件状态可以分为三种：modified, staged and committed                                                                                                                               |
-
-## 目录
-
-[git Rewriting History](git%20Rewriting%20History.md)
 
 ### Snapshots, Not Differences
 CVS，Subversion 子类的管理工具："Storing data as changes to a base version of each file"
