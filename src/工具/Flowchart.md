@@ -53,13 +53,46 @@ flowchart
 | 3个矩形  | \[ \[ \] \] | 子流程     |
 | 圆柱    | \[ ( )\]    | 数据库     |
 | 平行四边形 | \[  / /\]   | 数据输入/输出 |
-
-链接上的文本：
-``` 
-NodeA -->|text| NodeB
-```
-效果：
+## Links between nodes
+节点连接
+::: preview
 ``` mermaid
-flowchart
-	NodeA -->|text| NodeB
+flowchart LR
+	A --> B 
+	C --- D 
+	E --- |This is the text| F
+	G -.-> |text| H
+	k ==> |text| L
+	M --> N & O --> P
+	R <--> S
+    T --o U
+    V --x W
+
 ```
+:::
+
+| 连接类型                 | 语法                | 说明                                     |
+| -------------------- | ----------------- | -------------------------------------- |
+| link with arrow head | A --> B；C --- D   |                                        |
+| 带文本描述的arrow head     | E --> \|text\| F  | 在箭头后使用\| \| 包围说明文本，所有箭头都可以使用这种方法定义文本描述 |
+| Dotted Link          | G -.-> H          |                                        |
+| Thick Link           | K ==> L           |                                        |
+| multiple link        | M --> N & O --> P | 看作是一个整体，拆分后对整体内包含的所有node 都有有效          |
+| 双向箭头                 | R <--> S          |                                        |
+| ⚪                    | T --o U           |                                        |
+| x                    | V --x W           |                                        |
+
+## Comments
+::: preview
+``` mermaid
+flowchart LR
+	A --> B
+	%% this is a comment 
+	B --> C
+```
+:::
+
+注释的要求：
+- 另起一行
+- 使用\%% 作为起始
+
