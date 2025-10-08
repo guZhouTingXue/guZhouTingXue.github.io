@@ -27,9 +27,9 @@ category: English
 |                               | zero article + plural             | Doctors are badly needed at the front.                                 | 强调不同个体、多数或群体，而非任一个体或整类时 |
 |                               | zero article + uncountable noun   | Electricity is a form of energy                                        |                         |
 | Specific Reference            |                                   |                                                                        |                         |
-| Definite Specific Reference   | the                               | He is studying the life of Lu Xun.                                     |                         |
-|                               | zero article                      |                                                                        |                         |
-| Indefinite Specific Reference | a/an                              | I met an old man on my way here.                                       |                         |
+| Definite Specific Reference   | the                               | Could you tell me `the shortest way` to the railway station?           |                         |
+|                               | zero article + 抽象名词               | He doesn't deal much with `society`.                                   | society 限定为He 所生存的社会    |
+| Indefinite Specific Reference | a/an + singular                   | I met `an old man` on my way here.                                     |                         |
 |                               | zero article + uncountable/plural | All the city streets were flowing with `water` after the night's rain. |                         |
-| Unique Reference              | the                               | The moon hung low in the sky                                           |                         |
+| Unique Reference              | the                               | `The moon` hung low in the sky                                         |                         |
 |                               | zero article                      | I know `Father` will back soon.                                        | 首字母大写                   |
