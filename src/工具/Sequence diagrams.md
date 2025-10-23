@@ -224,3 +224,50 @@ sequenceDiagram
 participant A as object<br>Alice
 ```
 
+
+## Grouping / Box
+可以将多个actor放到一个带背景颜色（可选）的框内
+实现：
+``` 
+sequenceDiagram
+box Aqua title
+	participant A
+	participant B
+end
+box Another Group
+	participant C
+end
+box rgb(33,66,99)
+	participant D
+end
+	A ->> B: hello
+	B ->> C: nihao
+	C ->> D: ..
+```
+
+| 行号   | 功能                           | 说明  |
+| ---- | ---------------------------- | --- |
+| 2-4  | 指定颜色为Aqua，grouping 的标题为title |     |
+| 6-8  | 不带颜色的grouping                |     |
+| 9-11 | 通过rgb指定颜色，不带title            |     |
+
+- 不能直接在box内使用 A->>B 定义actors的同时定义消息，只能使用participant 定义box包含的actor
+- <mark style="background: #FFF3A3A6;">发送的消息必须带内容？</mark>
+效果：
+``` mermaid
+sequenceDiagram
+box Aqua title
+	participant A
+	participant B
+end
+box Another Group
+	participant C
+end
+box rgb(33,66,99)
+	participant D
+end
+	A ->> B: hello
+	B ->> C: nihao
+	C ->> D: ..
+```
+

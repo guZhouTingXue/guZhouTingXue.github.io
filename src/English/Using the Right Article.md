@@ -13,7 +13,7 @@ tags:
 	* 学习articles 的重要性：appears most often in English
 	* Why are these small words so hard to learn?
 		* do not have articles
-		* use them differently that English does.
+		* use them differently than English does.
 	* A basic understanding of common patterns can make learning articles easier.
 		* Fairy tales capture one such powerful pattern
 	* Indefinite articles
