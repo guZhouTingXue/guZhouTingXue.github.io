@@ -112,18 +112,32 @@ markdown: {
 },
 ```
 
-示例：
-> [!note]
-> 这是一条注释信息
-> 语法：\>\[!note]  换行 > 这是一条。。。
+示例:
+:::preview
+>[!note]
+>note，vuepress 中除了提示标题，还需要有内容才会呈现效果，否则只会显示文字内容。obsidian中可以不包含内容直接显示标题。
+
+>[!note]
+
+:::
 
 支持的类型：
-- important
-- info
-- tip
-- warning
-- caution
-- note
+
+
+>[!important]
+>important
+
+>[!info]
+>info
+
+>[!tip]
+>tip
+
+>[!warning]
+>warning
+
+>[!caution]
+>caution
 
 问：<mark style="background: #FFF3A3A6;">不支持quote，该如何添加支持类型？</mark>
 

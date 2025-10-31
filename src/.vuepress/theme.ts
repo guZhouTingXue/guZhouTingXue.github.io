@@ -3,6 +3,8 @@ import { hopeTheme } from "vuepress-theme-hope";
 import navbar from "./navbar.js";
 import sidebar from "./sidebar.js";
 
+import "dotenv/config";
+
 export default hopeTheme({
   hostname: "https://guzhoutingxue.github.io/", //当前网站部署到的域名
 
@@ -45,13 +47,14 @@ export default hopeTheme({
 
   // 加密配置
   encrypt: {
-    config: {
-      "/demo/encrypt.html": {
-        hint: "Password: 1234",
-        password: "1234",
-      },
-    },
+	config: {
+		"/生活/私.html": {
+		  password: [process.env.PASSWORD!],
+		  hint: "The password you specified.",
+		},
+	},
   },
+
 
   // 多语言配置
   metaLocales: {
