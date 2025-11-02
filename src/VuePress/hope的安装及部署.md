@@ -21,7 +21,7 @@ npm init vuepress-theme-hope@latest my-docs
 ``` 
 node_modules/  package-lock.json  package.json  src/  tsconfig.json
 ```
-运行示例
+4. 运行示例
 ![](./attachments/hope的安装及部署-2.webp)
 
 ## 部署到github

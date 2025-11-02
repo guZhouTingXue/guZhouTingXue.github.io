@@ -4,9 +4,19 @@ tags:
   - English/Grammar/Determiners/Articles
 ---
 # Using the Right Article
-
-[mp3](/resources/English/Using-the-Right-Article.mp3)
-[pdf](/resources/English/Using-the-Right-Article.pdf)
+---
+<VidStack
+  src="/resources/English/Using-the-Right-Article.mp3"
+    :tracks="[
+	  {
+		  src: '/resources/English/Using-the-Right-Article_chapter.vtt',
+		  kind: 'chapters',
+		  language: 'en-US',
+		  default: true,
+	  },
+  ]"
+/>
+---
 
 @startmindmap
 * Articles
@@ -40,3 +50,7 @@ tags:
 	* The a/the switch
 	* General statements
 @endmindmap
+
+## 资源
+[mp3](/resources/English/Using-the-Right-Article.mp3)
+[pdf](/resources/English/Using-the-Right-Article.pdf)
