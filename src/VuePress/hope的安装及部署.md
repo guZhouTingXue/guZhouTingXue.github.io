@@ -62,3 +62,29 @@ git push
 6. 查看站点
 ![](./attachments/hope的安装及部署-6.webp)
 
+
+## Actions 错误 及 解决
+### 安装依赖
+**报错**
+``` 
+Run corepack enable
+npm error code EUSAGE
+npm error
+npm error `npm ci` can only install packages 
+when your package.json and package-lock.json or npm-shrinkwrap.json are in sync.
+Please update your lock file with `npm install` before continuing.
+```
+
+**原因**
+`package-lock.json` 和 `package.json` 不一致
+
+**解决**
+1. 切换到lock路径，删除lock文件
+``` bash
+rm package-lock.json
+```
+2. 解析依赖，重新生成lock 然后 安装到 `node_modules`
+``` bash
+npm install
+```
+3. 再次提交lock文件
