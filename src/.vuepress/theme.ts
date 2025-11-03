@@ -5,6 +5,9 @@ import sidebar from "./sidebar.js";
 
 import "dotenv/config";
 
+//
+import { registerComponentsPlugin } from '@vuepress/plugin-register-components';
+
 export default hopeTheme({
   hostname: "https://guzhoutingxue.github.io/", //当前网站部署到的域名
 
@@ -158,6 +161,12 @@ export default hopeTheme({
 	slimsearch: {
 	
 	},
+	
+	//注册全局组件
+	//registerComponentsPlugin({
+
+	//}),
+	
     // 启用之前需安装 @waline/client
     // 警告: 这是一个仅供演示的测试服务，在生产环境中请自行部署并使用自己的服务！
     // comment: {
@@ -166,7 +175,15 @@ export default hopeTheme({
     // },
 
     components: {
-      components: ["Badge", "VPCard", "VidStack"],
+      components: ["Badge", "VPCard", "VidStack", 
+	  "VPBanner", 
+	  "PDF"],
+	  componentOptions: {
+	    pdf: {
+		  pdfjs: "/pdfjs/web", // 告诉组件 viewer.html 的路径
+	    },
+	},
+	
     },
 
     icon: {

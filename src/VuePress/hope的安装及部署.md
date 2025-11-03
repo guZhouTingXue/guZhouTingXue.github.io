@@ -79,12 +79,18 @@ Please update your lock file with `npm install` before continuing.
 `package-lock.json` 和 `package.json` 不一致
 
 **解决**
-1. 切换到lock路径，删除lock文件
+1. 切换到lock路径，删除lock文件 以及 `node_modules`文件夹（所有已安装的module的存储路径）
 ``` bash
 rm package-lock.json
+rm -rf node_modules
 ```
+
+>[!warning]
+>如果仅清除lock文件，可能仍会报上面的错误
+
 2. 解析依赖，重新生成lock 然后 安装到 `node_modules`
 ``` bash
 npm install
 ```
 3. 再次提交lock文件
+

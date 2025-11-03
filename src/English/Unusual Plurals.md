@@ -7,6 +7,14 @@ tags: []
 >[!quote] 
 >one fish, <mark style="background: #FFB8EBA6;">two fish</mark>, red fish, blue fish, goes the Dr.Seuss children's story. Why isn't it <mark style="background: #FFB8EBA6;">two fishes</mark>?
 
+ <!--more-->
+
+---
+<VidStack
+  src="/resources/English/unusual-plurals.mp3"
+/>
+
+---
 
 ## Life on the farm
 sheep
@@ -51,3 +59,6 @@ medium -> media
 
 
 
+## 资源
+[pdf](/resources/English/unusual-plurals.pdf)
+[mp3](/resources/English/unusual-plurals.mp3)
