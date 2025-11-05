@@ -12,6 +12,14 @@ tags: []
 ---
 <VidStack
   src="/resources/English/unusual-plurals.mp3"
+  :tracks="[
+	  {
+		  src: '/resources/English/unusual-plurals.en_chapters.vtt',
+		  kind: 'chapters',
+		  language: 'en-US',
+		  default: true,
+	  }
+  ]"
 />
 
 ---
@@ -41,7 +49,7 @@ autumn leaves and sharp knives.
 
 > Another way to make plurals in English is to add the suffix -en
 
-brother -> brethren
+br`o`th`er` -> br`e`th`ren`：复数形式除了词尾有变化，前面的部分也有变化
 child -> children
 ox->oxen
 
@@ -57,7 +65,18 @@ cactus -> cacti 仙人掌
 datum -> data
 medium -> media
 
+## 文档
+---
+<PDF url="/resources/English/unusual-plurals.pdf" />
 
+---
+
+## 问题
+
+| 原句                                                          | 问题                                                                 | 解答  |
+| ----------------------------------------------------------- | ------------------------------------------------------------------ | --- |
+| what happened to our neat rule for making **words plural**? | 为什么是 words plural，而不是plural words？或者 making plurals？               |     |
+| These are words that **come** from Old English.             | 为什么这里是come，而不是came？在English **came** from German roots. 中为什么是came？ |     |
 
 ## 资源
 [pdf](/resources/English/unusual-plurals.pdf)

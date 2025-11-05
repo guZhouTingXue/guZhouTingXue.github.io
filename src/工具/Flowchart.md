@@ -7,6 +7,7 @@ tags:
 各种形状的节点表示处理对象、处理过程、处理结果等
 类型：graph TD
 ## 基本流程图要素
+:::preview
 ``` mermaid
 graph TD
     A[fa:fa-user Tom] -->|Get money| B(Go shopping)
@@ -15,6 +16,8 @@ graph TD
     C -->|Two| E[iPhone]
     C -->|Three| F[fa:fa-car Car]
 ```
+
+:::
 
 定义节点的语法：
 :::tabs
@@ -44,15 +47,18 @@ flowchart
 通过id 引用节点
 
 各种形状的节点定义：
+:::preview
+``` mermaid
+flowchart
+	n0[过程]
+	n1(开始/结束)
+	n2{选择}
+	n3[[子流程]]
+	n4[(数据库)]
+	n5[/数据输入/输出/]
+```
+:::
 
-| 形状    | 定义          | 功能      |
-| ----- | ----------- | ------- |
-| 矩形    | \[ ]        | 过程      |
-| 圆角矩形  | ( )         | 开始/结束   |
-| 菱形    | { }         | 选择      |
-| 3个矩形  | \[ \[ \] \] | 子流程     |
-| 圆柱    | \[ ( )\]    | 数据库     |
-| 平行四边形 | \[  / /\]   | 数据输入/输出 |
 ## Links between nodes
 节点连接
 ::: preview
