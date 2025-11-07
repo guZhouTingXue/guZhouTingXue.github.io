@@ -54,15 +54,42 @@ iron-铁 是material 比较好理解，铁可以用来铸剑 或 冶炼成各种
 -  I made a mistake and I'm `man enough` to acknowledge.
 
 2. too much/little
- He seems to have `too much mouth` and `too little ear`.
+ - He seems to have `too much mouth` and `too little ear`.
+
 3. the + noun
-`The pen` is mightier than `the sword`.
+- `The pen` is mightier than `the sword`.
+
 4. 习语
-go to `school`
+- go to `school`
+- `face` to `face`
+- at `heart`
 
 
 
 
+## shortened word
+缩略词
+构成方式
+1. 取词首
 
+| 原型            | 缩写   |                                                              |
+| ------------- | ---- | ------------------------------------------------------------ |
+| advertisement | ad   |                                                              |
+| communication | com  | 通讯端口的全称是communication ports<br>![](./attachments/Nouns.webp) |
+| dormitory     | dorm |                                                              |
 
+2. 取尾部
 
+| 原型         | 缩写     |     |
+| ---------- | ------ | --- |
+| helicopter | copter |     |
+| telephone  | phone  |     |
+
+3. 取第一个字母 和 最后一个字母
+
+| 原型     | 缩写  |     |
+| ------ | --- | --- |
+| doctor | Dr. |     |
+| foot   | ft. |     |
+| hour   | hr. |     |
+| year   | yr. |     |

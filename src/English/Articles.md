@@ -2,12 +2,12 @@
 category: English
 ---
 
-# 冠词 Articles
+# 5. 冠词 Articles
 >[!quote]
 >冠词是一种中位限定词，可以用来限定单、复数名词和不可数名词。
 
-[Using the Right Article](Using%20the%20Right%20Article.md)
-[What is the 'Zero Article'](What%20is%20the%20'Zero%20Article'.md)
+[Using the Right Article](Resources/Using%20the%20Right%20Article.md)
+[What is the 'Zero Article'](Resources/What%20is%20the%20'Zero%20Article'.md)
 
 
 ## 分类

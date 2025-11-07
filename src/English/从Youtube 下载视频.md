@@ -15,7 +15,8 @@ category: English
 [PotPlay 给视频添加独立的音频](http://www.potplayercn.com/course/2982.html)
 	我的potplay 版本各个设置分开了。点击右键-》播放-》播放设置-》勾选：自动加载外部音频
 ![](./attachments/从Youtube%20下载视频-1.webp)
-
+	
+5. 使用工具将音频合并到视频 
 ## 其他说明
 1. youtube中一个系列中的每个视频链接除了index 序号不同，其余部分也有区别；
 2. 使用IDM 下载大量视频时可以单独建立分类

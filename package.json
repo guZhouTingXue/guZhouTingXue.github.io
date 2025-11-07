@@ -16,6 +16,7 @@
     "@vuepress/plugin-slimsearch": "^2.0.0-rc.118",
     "dotenv": "^17.2.3",
     "echarts": "^6.0.0",
+    "katex": "^0.16.25",
     "mermaid": "^11.12.1",
     "sass-embedded": "^1.93.3",
     "vidstack": "^1.12.13",
