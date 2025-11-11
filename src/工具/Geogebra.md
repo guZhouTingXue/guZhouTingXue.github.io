@@ -49,3 +49,38 @@ Creates a vector from Start Point to End Point.
 
 4. 示例
 ![|400x214](./attachments/Geogebra-1.webp)
+
+### Dot product
+```
+Dot( <Vector>, <Vector> )
+
+Returns the dot product (scalar product) of the two vectors.
+```
+
+
+### Cross product
+``` 
+Cross( <Vector u> , <Vector v> )
+
+Calculates the cross product of u and v. Instead of vectors you can also use lists.
+```
+
+
+## Polygon
+1. 指定多边形的所有顶点
+``` 
+Polygon((1, 1), (3, 0), (3, 2), (0, 4))
+```
+![|299x330](./attachments/Geogebra-2.webp)
+2. 通过list 指定顶点
+```
+q1=Polygon({(1,1),(3,0),(3,2),(0,4)})
+```
+效果和前面的一样，list只不过是将点放到了{ }中
+
+2. 指定底边以及边数
+```
+Polygon((1, 1), (4, 1), 6)
+```
+![|303x331](./attachments/Geogebra-3.webp)
+

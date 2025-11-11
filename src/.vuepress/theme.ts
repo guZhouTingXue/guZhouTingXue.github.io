@@ -27,7 +27,9 @@ export default hopeTheme({
 	darkmode: "switch", //默认自动切换
 
   // 侧边栏
-  sidebar,
+  sidebar: {
+	"/": "structure",
+  },
 
   // 页脚
   footer: "MIT Licensed",
