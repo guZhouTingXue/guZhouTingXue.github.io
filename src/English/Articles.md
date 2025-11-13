@@ -12,6 +12,11 @@ category: English
 
 ## 分类
 
+| 序号  | 类别                                   | 例词   |
+| --- | ------------------------------------ | ---- |
+| 1   | Definite Article                     | the  |
+| 2   | Indefinite Article                   | a/an |
+| 3   | Zero Article/ the Absence of Article |      |
 
 ## 用法
 - 类指（Generic Reference）：表示类别，泛指一类人或物

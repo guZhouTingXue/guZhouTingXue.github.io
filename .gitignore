@@ -3,6 +3,6 @@ node_modules/
 src/.vuepress/.cache/
 src/.vuepress/.temp/
 src/.vuepress/dist/
-src/.obsidian
 src/.trash
 .env
+src/.obsidian/workspace.json
