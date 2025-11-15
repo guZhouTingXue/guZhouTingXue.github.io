@@ -9,7 +9,7 @@ category: English
 
 <!--more-->
 
-- [What_Are_Intensive_Pronouns](Resources/What_Are_Intensive_Pronouns.md)
+- [What Are Intensive Pronouns](Resources/What%20Are%20Intensive%20Pronouns.md)
 
 ---
 <table>

@@ -6,3 +6,4 @@ src/.vuepress/dist/
 src/.trash
 .env
 src/.obsidian/workspace.json
+src/.obsidian/plugins/editing-toolbar/data.json
