@@ -19,12 +19,12 @@ tags:
 | --- | ------------------------------------- | -------------------------------------- |
 | 1   | [Personal Pron.](Personal%20Pron..md) | I, you, he/she/it, we, you, they       |
 | 2   | Possessive Pron                       |                                        |
-| 3   | Determinative                         | my, your                               |
-| 4   | Nominal                               | mine, yours                            |
-| 5   | Reflexive                             | myself, yourself                       |
-| 6   | Reciprocal                            | each other, one another                |
-| 7   | Demonstrative                         | this, that, these, those, such         |
-| 8   | Interrogative                         | who, whom, whose, that, which          |
-| 9   | Conjunctive                           |                                        |
-| 10  | Relative                              | who, whom, whose, which, that, as, but |
+|     | Determinative                         | my, your                               |
+|     | Nominal                               | mine, yours                            |
+| 3   | Reflexive                             | myself, yourself                       |
+| 4   | Reciprocal                            | each other, one another                |
+| 5   | Demonstrative                         | this, that, these, those, such         |
+| 6   | Interrogative                         | who, whom, whose, that, which          |
+| 7   | Conjunctive                           |                                        |
+| 8   | Relative                              | who, whom, whose, which, that, as, but |
 

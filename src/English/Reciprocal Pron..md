@@ -2,6 +2,7 @@
 category: English
 ---
 # 6.4 Reciprocal Pron.
+- [What Are Reciprocal Pronouns](Resources/What%20Are%20Reciprocal%20Pronouns.md)
 ---
 <table>
     <thead>
