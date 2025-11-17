@@ -21,14 +21,15 @@ category: English
 ---
 
 ## Words in This Story
-| word | meaning | 含义  |
-| ---- | ------- | --- |
-|      |         |     |
+| word   | meaning                                            | 出处                                | 含义  |
+| ------ | -------------------------------------------------- | --------------------------------- | --- |
+| strict | not allowing people to break rules or behave badly | a very **strict**<br>writing test | 严格的 |
+|        |                                                    |                                   |     |
 
 ## 文档
 
 ---
-<PDF url="/resources/English/6_Pronouns/ What_Are_Reciprocal_Pronouns.pdf" />
+<PDF url="/resources/English/6_Pronouns/What_Are_Reciprocal_Pronouns.pdf" />
 
 ---
 

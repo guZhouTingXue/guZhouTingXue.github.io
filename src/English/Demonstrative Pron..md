@@ -10,4 +10,4 @@ category: English
 - so
 
 <!--more-->
-
+- [Demonstrating How to Use Demonstratives](Resources/Demonstrating%20How%20to%20Use%20Demonstratives.md)
