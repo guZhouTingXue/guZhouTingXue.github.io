@@ -44,3 +44,24 @@ $$
 
 
 
+## Linking notes and files
+### Supported formats for internal links
+1. `[[Enlgish/ResouRelative Pronouns]]`
+2. `[[Relative Pronouns.md]]`
+3. `[Relative Pronouns](Relative%20Pronouns)`
+4. `[Relative Pronouns](Relative%20Pronouns.md)`
+
+以上4中链接都会链接到Relative Pronouns.md 
+
+1、2 是 Wikilink 格式，3、4是 Markdown 格式
+可以看到wiki 格式只需要文件名称就能链接到对应的md文件，而Markdown 格式链接名 和 链接文件分开指定，同时链接文档路径需要 URL encode（用`%20` 替换文件名中的空格）
+
+### Link to a file
+在编辑模式下输入`[[` 就会弹出链接文件菜单，输入链接文件名称，根据提示进行选择
+
+- 即使使用Markdown 格式的链接也能通过`[[` 输入链接，ob会自动转换链接的格式
+
+
+### Link to a heading in a note
+>[!info]
+>To link to a heading in another note, add a hash (`#`) at the end of the link destination, followed by the heading text.

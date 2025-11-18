@@ -220,6 +220,7 @@ export default hopeTheme({
 
 。。。问题：<mark style="background: #FFF3A3A6;">在代码块中的\::: 会匹配到代码块外的::: </mark>
 
+问：<span style="background:#fff88f">如何设置折叠状态？</span>
 ## 未归档
 表格：表格内换行 使用\<br>
 

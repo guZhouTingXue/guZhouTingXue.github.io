@@ -2,7 +2,7 @@
 category: English
 ---
 
-# 英语资源文件模板
+# Demonstrating How to Use Demonstratives
 
 ---
 

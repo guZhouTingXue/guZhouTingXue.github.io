@@ -20,6 +20,17 @@ category: English
 
 ---
 
+@startmindmap
+* what are reciprocal pronouns
+	** Pronouns: such as I, me or my
+	*** take the place of a noun
+	*** show possession
+	** Reciprocal pronouns
+	*** reciprocal: a word that describes a relationship in which people or groups do something similar.
+	*** Mark helped Bob, and Bob helped Mark.-> Mark and Bob helped each other.
+	*** each other: In general, refers to two nouns, sometimes, refers to three or more
+	*** one another: refers to three or more nouns
+@endmindmap
 ## Words in This Story
 | word   | meaning                                            | 出处                                | 含义  |
 | ------ | -------------------------------------------------- | --------------------------------- | --- |
