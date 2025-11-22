@@ -21,9 +21,19 @@ category: English
 ---
 
 ## Words in This Story
-| word | meaning | 出处  | 含义  |
-| ---- | ------- | --- | --- |
-|      |         |     |     |
+| word           | meaning | 出处  | 含义  |
+| -------------- | ------- | --- | --- |
+| consciously    |         |     |     |
+| internalize    |         |     |     |
+| recommendation |         |     |     |
+| certain        |         |     |     |
+| occur          |         |     |     |
+| respond        |         |     |     |
+| continuous     |         |     |     |
+| tricky         |         |     |     |
+| mile           |         |     |     |
+| choice         |         |     |     |
+| choose         |         |     |     |
 
 ## 文档
 

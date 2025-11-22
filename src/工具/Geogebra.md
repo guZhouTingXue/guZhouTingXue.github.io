@@ -84,3 +84,24 @@ Polygon((1, 1), (4, 1), 6)
 ```
 ![|303x331](./attachments/Geogebra-3.webp)
 
+
+## Slider
+### command
+``` 
+Slider( <Min>, <Max>, <Increment>, <Speed>, <Width>,<Is Angle>, <Horizontal>, <Animating>, <Boolean Random>)
+```
+min、max 是 compulsory，其他参数均有默认值
+
+示例：
+```
+Slider(1,3)
+```
+效果：
+![|248x47](./attachments/Geogebra-4.webp)
+![|252x81](./attachments/Geogebra-5.webp)
+
+
+### tool
+![](./attachments/Geogebra-6.webp)
+选择Slider 工具后需要在 `Graphics（2）`中选择放置的位置
+
