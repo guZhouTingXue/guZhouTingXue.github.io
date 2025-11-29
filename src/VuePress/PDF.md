@@ -4,6 +4,9 @@ category: VuePress
 # PDF
 [PDF | 组件库](https://plugin-components.vuejs.press/zh/guide/media/p-d-f.html)
 
+>[!note]
+>在本地服务器查看，使用edge 基本无法加载出文档内容（显示为空白），但是使用chrome 就可以。
+
 在md文档中嵌入PDF阅读器
 1. 下载 `pdf.js`:[PDF.js - Getting Started](https://mozilla.github.io/pdf.js/getting_started/#download)，将解压后的pdfjs 文件夹拷贝到`.vuepress/public/`下（当前下载最新版本为5.4.394）
 2. 启用

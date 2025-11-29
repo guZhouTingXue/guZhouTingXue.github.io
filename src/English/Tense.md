@@ -44,10 +44,10 @@ category: English
             <td rowspan="3"> Perfect </td>  
             <td>Present</td>  
             <td>I have driven that road</td>  
-            <td>had + past participle verb</td>  
+            <td>have/has + past participle verb</td>  
         </tr>        <tr>            <td>Past</td>  
             <td>I had already driven that road in the past</td>  
-            <td>have/has + past participle verb</td>  
+            <td>had + past participle verb</td>  
         </tr>        <tr>            <td>Future</td>  
             <td>I will have driven 200 miles by tomorrow</td>  
             <td>will have + past participle verb</td>  

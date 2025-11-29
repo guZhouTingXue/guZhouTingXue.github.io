@@ -229,7 +229,9 @@ Switched to branch 'feature1'
 :::
 
 #### Detached HEAD state
-如果对分支上的非最新版本进行checkout，就会进行Detached HEAD state，此时HEAD 指向的commit 没有 分支。仍然可以进行提交，但是在Detached HEAD 上进行的提交可能被清理掉，导致修改的内容丢失。
+如果对分支上的非最新版本进行checkout，就会进入Detached HEAD state，此时HEAD 指向的commit 不是该分支的最新版本。
+表述某一个分支时指的是该分支的最新版本
+此时仍然可以进行提交，但是在Detached HEAD 上进行的提交可能被清理掉，导致修改的内容丢失。
 可以在Detached HEAD 上进行测试，如果要保留修改需要将其转变为分支
 
 Detached HEAD state 状态提示：

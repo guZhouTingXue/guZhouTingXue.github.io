@@ -1,6 +1,6 @@
 ---
 category: 读书笔记
-tags:
+cover: PDCA循环工作法封面.webp
 ---
 # PDCA 循环工作法
 著者：\[日] 冈村拓朗 译：朱悦玮 出版单位：北京时代华文书局
@@ -10,6 +10,7 @@ tags:
 😊
 <!--more-->
 
+![|199x257](attachments/PDCA循环工作法封面.webp)
 
 ## 1 让PDCA 循环起来改变人生
  **什么是PDCA？**

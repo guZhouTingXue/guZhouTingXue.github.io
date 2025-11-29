@@ -113,11 +113,11 @@ markdown: {
 ```
 
 示例:
+note，vuepress 中除了提示标题，还需要有内容才会呈现效果，否则只会显示文字内容。obsidian中可以不包含内容直接显示标题。
+
 :::preview
 >[!note]
->note，vuepress 中除了提示标题，还需要有内容才会呈现效果，否则只会显示文字内容。obsidian中可以不包含内容直接显示标题。
 
->[!note]
 
 :::
 
@@ -127,8 +127,11 @@ markdown: {
 >[!important]
 >important
 
+:::preview
 >[!info]
 >info
+
+:::
 
 >[!tip]
 >tip
@@ -141,6 +144,13 @@ markdown: {
 
 问：<mark style="background: #FFF3A3A6;">不支持quote，该如何添加支持类型？</mark>
 
+:::preview
+每行都要以 > 开始，否则内容不会被包围
+>[!warning]
+必须以>起始
+
+ob中能够正常显示
+:::
 
 ## 选项卡
 多个卡片放置在一起，通过标题切换卡片
@@ -242,4 +252,19 @@ export default hopeTheme({
 | ![](./attachments/Markdown-3.webp) |     |
 
 先将图片粘贴到表格外的空白处，添加标题，然后再贴到表格内，似乎是行得通。
+
+**html table**
+标签之间不能空行？
+``` html
+<table>
+	<tbody>
+		<td> hello </td>
+		
+	</tbody>
+</table>
+```
+
+![|300x139](./attachments/Markdown-4.webp)
+
+obsidian 中能正常显示
 

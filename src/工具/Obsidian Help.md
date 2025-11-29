@@ -65,3 +65,5 @@ $$
 ### Link to a heading in a note
 >[!info]
 >To link to a heading in another note, add a hash (`#`) at the end of the link destination, followed by the heading text.
+
+如果是要链接到当前文档的内的heading，直接使用\#

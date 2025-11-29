@@ -53,4 +53,19 @@ tags:
 
 
 
+## Multilines
+:::preview
+@startmindmap
+* root
+	**:标题 
+	文本里的换行
+	结尾;
+@endmindmap
+:::
+
+使用\:   \; 包围多行文本 
+
+>[!warning]
+>必须在\** - 层级符号后声明起始符号“\:” ，否则语法错误
+
 

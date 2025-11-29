@@ -24,8 +24,12 @@ export default navbar([
 			children: ["/IEC 60870-5-104/"],
 		},
 		{
-			text: "其他",
+			text: "OpenGL",
 			children: ["/LearnOpenGL/"],
+		},
+		{
+			text: "C++",
+			children: ["/网络编程/", "/并发编程/", "/C++ Primer/",],
 		},
 
 		],

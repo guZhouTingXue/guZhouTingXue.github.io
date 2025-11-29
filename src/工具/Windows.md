@@ -4,7 +4,14 @@ category: 工具
 # Windows
 系统相关配置
 
+## 传递优化
+>[!info]
+>传递优化能够快速、可靠地提供 Windows 和 Microsoft store 应用更新以及其他Microsoft 产品。
+>
 
+将本地下载的windows 更新 以及 应用 程序 上传给 已连接Internet 的其他电脑，也可以从其他电脑上下载windows 更新 以及应用。
+
+没有使用需求，还占用网络带宽，关闭。
 
 ## 以管理员身份运行程序
 **单次运行**
