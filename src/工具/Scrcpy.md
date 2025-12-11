@@ -49,9 +49,11 @@ INFO:     -->   (usb)  b7bec5a3                        device  23013RK75C
 
 
 ## 通过 wifi 连接
-1. 打开 开发者选项-》调试-》无线调试，启用无线调试
-2. 电脑 和 手机连接到同一个局域网
-3. 启动scrcpy
+1. 打开 开发者选项-》调试-》USB调试 以及 无线调试 -》启用无线调试
+**注意** ：必须开启USB调试，只开启无限调试 无法连接。连接后即使关闭无限调试，已建立的连接也不会断开。
+2. 连接USB
+3. 电脑 和 手机连接到同一个局域网
+4. 启动scrcpy 
 ``` bash
 D:\software\scrcpy-win64-v3.3.3\scrcpy-win64-v3.3.3>scrcpy --tcpip
 scrcpy 3.3.3 <https://github.com/Genymobile/scrcpy>
@@ -64,6 +66,8 @@ INFO: Connected to 192.168.1.6:5555
 ```
 
 `device 23013RK75C`：和手机参数中的认证型号一致
+
+**注意**：在连接USB后建立wifi 连接，再断开USB，wifi 连接可以保持，后续可以直接通过 `scrcpy` 启动。
 ## 选择连接设备
 scrcpy一次只能连接一台设备，如果同时存在多台设备 或 一台设备有多种连接方式，需要进行选择。
 1. 序列号-adb 识别设备的编号
