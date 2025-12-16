@@ -57,6 +57,10 @@ export default hopeTheme({
 		  password: [process.env.PASSWORD!],
 		  hint: "The password you specified.",
 		},
+		"/咖啡师/": {
+			password: [process.env.PASSWORD!],
+			hint: "The password you specified.",
+		},
 	},
   },
 
