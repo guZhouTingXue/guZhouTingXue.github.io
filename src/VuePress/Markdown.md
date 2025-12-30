@@ -268,3 +268,29 @@ export default hopeTheme({
 
 obsidian 中能正常显示
 
+**alert**
+不能在列表后直接使用alert块？需要空一行
+```
+1. 序号1
+2. fclose
+>[!info]
+>  The fclose() function flushes the stream pointed to by stream (writing any buffered
+>  output data using fflush(3)) and closes the under-lying file descriptor.
+```
+
+1. 序号1
+2. fclose
+
+>[!info]
+>  The fclose() 
+
+否则报错：
+```
+× Initializing and preparing data - failed in 3.87s
+error RangeError: Maximum call stack size exceeded
+    at Array.flat (<anonymous>)
+    at file:///D:/Project/VuePress/Blog/node_modules/@mdit/plugin-alert/lib/index.js:1:798
+    at file:///D:/Project/VuePress/Blog/node_modules/@mdit/plugin-alert/lib/index.js:1:1487
+
+```
+

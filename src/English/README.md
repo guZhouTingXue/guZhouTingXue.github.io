@@ -5,7 +5,6 @@ tags:
 ---
 
 # English
-[AI 翻译 - 免费在线翻译工具](https://ai-translator.cc/zh)
 
 [Voice of America - Learn American English with VOA Learning English](https://learningenglish.voanews.com/)
 

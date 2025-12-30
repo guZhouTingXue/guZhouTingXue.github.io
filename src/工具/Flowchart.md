@@ -102,3 +102,43 @@ flowchart LR
 - 另起一行
 - 使用\%% 作为起始
 
+
+# Subgraphs
+:::preview
+``` mermaid
+flowchart
+subgraph one
+	a1
+	a2	
+end
+subgraph two
+	b1
+end
+two --> one
+b1 --> a1
+```
+:::
+
+- 隐藏标题
+:::preview
+```mermaid
+flowchart
+subgraph T[" "]
+	a1 
+	a2
+end
+```
+:::
+
+- 设置subgraph 内组件的排列反向
+:::preview
+```mermaid
+flowchart
+subgraph one
+	direction LR
+	a1 
+	a2
+end
+```
+:::
+ob中没有效果
