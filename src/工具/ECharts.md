@@ -19,13 +19,20 @@ import { hopeTheme } from "vuepress-theme-hope";
 
 export default hopeTheme({
   markdown: {
+	
+    // 在启用之前安装 echarts npm install -D echarts
+	DANGEROUS_ALLOW_SCRIPT_EXECUTION: true,
+	DANGEROUS_SCRIPT_EXECUTION_ALLOWLIST: [
+		"工具/ECharts.md",
+	],
     echarts: true,
   },
 });
 ```
 3. 测试
 Diagram:
-::: echarts  test
+:::preview
+:::: echarts  test
 ```js
 const option = {
   xAxis: {
@@ -43,30 +50,8 @@ const option = {
   ]
 };
 ```
+::::
 :::
 
-Code:
-``` 
-:::echarts  test
-\``` js
-const option = {
-  xAxis: {
-    type: 'category',
-    data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
-  },
-  yAxis: {
-    type: 'value'
-  },
-  series: [
-    {
-      data: [150, 230, 224, 218, 135, 147, 260],
-      type: 'line'
-    }
-  ]
-};
-\```
-:::
-```
-
-
-## 如何让ECharts 获取表格数据自动更新显示
+## 扩展
+1. 如何让ECharts 获取表格数据自动更新显示？

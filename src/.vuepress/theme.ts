@@ -138,6 +138,12 @@ export default hopeTheme({
     // insert component easily
 
     // 在启用之前安装 echarts npm install -D echarts
+	DANGEROUS_ALLOW_SCRIPT_EXECUTION: true,
+	DANGEROUS_SCRIPT_EXECUTION_ALLOWLIST: [
+		"工具/ECharts.md",
+		"生活/电动汽车.md",
+		
+	],
     echarts: true,
 
     // 在启用之前安装 flowchart.ts

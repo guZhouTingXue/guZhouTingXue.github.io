@@ -19,14 +19,34 @@ category: English
 
 ---
 ## MindMap
-``` mermaid
-mindmap
-Passive voice
-	什么是Passive voice: a verb form in which the subject receives the action of the verb
-		example: I was born on a Saturday
-	active voice: subject-verb-object pattern
-	passive voice: the subject is acted upon
-	如何构建passive voice: use a form of the verb "be" followed by a past participle verb form
+```markmap
+# Passive voice
+## 什么是Passive voice
+- a verb form in which the subject receivs the action of the verb
+- example: I was born on a Saturday
+## Active voice
+- follow the subject-verb-object pattern
+- example: I love you 
+  
+## 在subject was acted upon时不再是active voice
+- imagine that someone stole your wallet
+  
+## 如何构建passive voice
+- use a form of the verb "be" followed by a past participle verb form
+  
+## 构成passive voice的前提
+- only transitive verbs can be passive
+- you cannot say "I was arrived by train"
+  
+## passive voice 相比 active voice 的特点
+- make the speaker or writer seem indirect and week
+- which would you rather hear: "I love you" or "You was loved by me"
+  
+## 使用passive的情况一 the most common reason
+- when the actor is unknown or unimportant
+- example0: My visa was processed
+- example1: My shoes were made in India
+- example2: The car was imported from Germany
 ```
 
 
@@ -49,6 +69,7 @@ Passive voice
 | Defense      | what is said in court to prove that a person did not commit a crime                                                              | Defense attorney: Objection!                                  | 辩护      |                        |
 | Withdrawn.   | to move back or away from a place or situation; to make somebody/something do this                                               |                                                               | 撤回      |                        |
 | suspect      | to have an idea that something is probably true or likely to happen, especially something bad, but without having definite proof | a suspect for a crime                                         | 怀疑      |                        |
+| frankly      | in an honest and direct way that people might not like                                                                           | I'm frankly not happy about them.                             | 坦率地、直白地 |                        |
 
 ## 文档
 
