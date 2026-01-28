@@ -88,7 +88,7 @@ category: English
 舌位图
 :::tabs
 @tab Modern English
-![|401x275](./attachments/Pronunciation-2.webp)
+![|393x277](./attachments/Pronunciation-1.webp)
 
 @tab wiki
 ![|401x304](./attachments/Pronunciation.webp)

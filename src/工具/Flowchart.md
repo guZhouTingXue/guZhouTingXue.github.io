@@ -45,8 +45,10 @@ flowchart
 :::
 
 通过id 引用节点
+## 节点形状
+各种形状的节点定义
 
-各种形状的节点定义：
+**旧的语法**
 :::preview
 ``` mermaid
 flowchart
@@ -59,6 +61,39 @@ flowchart
 ```
 :::
 
+**新的语法**
+:::preview
+``` mermaid
+flowchart RL
+    A@{ shape: rect, label: "Process" }
+    B@{ shape: cross-circ, label: "Summary" }
+    C@{ shape: summary, label: "Summary" }
+    D@{ shape: circle, label: "Starting point" }
+    E@{ shape: sm-circ, label: "Small starting point" }
+```
+:::
+
+语法支持的节点形状表
+
+| Semantic Name | Shape Name     | Short Name | Alias Supported          |
+| ------------- | -------------- | ---------- | ------------------------ |
+| Process       | Rectangle      | rect       | proc, process, rectangle |
+| Start         | Circle         | circle     | circ                     |
+| Start         | Small Circle   | sm-circ    | small-circle, start      |
+| Summary       | Crossed Circle | cross-circ | crossed-circle, summary  |
+
+- Semantic Name：节点在流程图中的作用
+- Shape Name：节点形状
+- Short Name：在代码中的名称，使用Shape Name的简写
+- Alias Supported：别名，通常为完整的shape name 或 Semantic name
+
+新的语法使用文本描述代替符号描述，不需要记忆抽象的符号，更容易使用。
+注意事项：
+1. 节点的ID、@ 以及 \{ 符号需要连续，中间不能有空格；
+2. 可以使用Short Name 或 Alias Supported 表示同一形状节点
+3. 不同形状节点可能具有相同的Semantic 
+4. 节点可以通过label属性指定描述文本。不支持的节点可以指定，但是不会显示文本。
+5. 属性名称 和 属性值 之间需要空格，如shape: odd，否则指定的属性无效
 ## Links between nodes
 节点连接
 ::: preview
@@ -73,6 +108,7 @@ flowchart LR
 	R <--> S
     T --o U
     V --x W
+    X ~~~ Y
 
 ```
 :::
@@ -87,6 +123,7 @@ flowchart LR
 | 双向箭头                 | R <--> S          |                                        |
 | ⚪                    | T --o U           |                                        |
 | x                    | V --x W           |                                        |
+| invisible link       | X ~~ Y            | 不可见的连接，用来调整节点的位置？                      |
 
 ## Comments
 ::: preview

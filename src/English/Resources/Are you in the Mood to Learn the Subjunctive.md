@@ -69,12 +69,18 @@ category: English
 
 **adjectives**
 
-| word       | meaning | 出处  | 含义  | 关联  |
-| ---------- | ------- | --- | --- | --- |
-| essential  |         |     |     |     |
-| imperative |         |     |     |     |
-| important  |         |     |     |     |
-| necessary  |         |     |     |     |
+| word       | meaning                                         | 出处  | 含义  | 关联  |
+| ---------- | ----------------------------------------------- | --- | --- | --- |
+| essential  | completely necessary; that you must have or do  |     |     |     |
+| imperative | very important or urgent                        |     |     |     |
+| important  | having great value or influence; very necessary |     |     |     |
+| necessary  | that is needed for a purpose or a reason        |     |     |     |
+
+| word          | meaning                                                                                | examples                                                                                                              | 含义    |
+| ------------- | -------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | ----- |
+| authoritative | that you can trust and respect as true and correct                                     | Politicians love to use the subjunctive because it gives a serious and authoritative tone to what they are<br>saying. | 权威性的  |
+| nominee       | a person who is suggested for an important job, prize, etc.                            | the presidential nominee of the Republican Party                                                                      | 被提名人  |
+| critically    | in a way that is extremely important because a future situation will be affected by it | it's critically important that the next president of the United States 。。。                                            | 至关重要地 |
 
 ## 文档
 
