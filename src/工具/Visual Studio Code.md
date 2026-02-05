@@ -5,9 +5,10 @@ category: 工具
 
 ## 通用插件
 
-| 名称                                            | 功能                                                                                                                         | 说明                                                     |
-| --------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------ |
-| [GitHub Repositories](#GitHub%20Repositories) | lets you quickly browse, search, edit, and commit to any remote GitHub repository directly from within Visual Studio Code. | 在vs code 上快速浏览github开源项目代码，文件临时缓冲。如果需要深入了解，需要将项目下载到本地。 |
+| 名称                                                                                    | 功能                                                                                                                         | 说明                                                     |
+| ------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------ |
+| [GitHub Repositories](#GitHub%20Repositories)                                         | lets you quickly browse, search, edit, and commit to any remote GitHub repository directly from within Visual Studio Code. | 在vs code 上快速浏览github开源项目代码，文件临时缓冲。如果需要深入了解，需要将项目下载到本地。 |
+| [Markmap](https://marketplace.visualstudio.com/items?itemName=gera2ld.markmap-vscode) | This extension integrates markmap into VSCode.                                                                             | 本地实时预览Markdown中的Markmap                                |
 
 
 ### GitHub Repositories
