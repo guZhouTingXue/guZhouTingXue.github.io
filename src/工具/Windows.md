@@ -12,6 +12,7 @@ category: 工具
 将本地下载的windows 更新 以及 应用 程序 上传给 已连接Internet 的其他电脑，也可以从其他电脑上下载windows 更新 以及应用。
 
 没有使用需求，还占用网络带宽，关闭。
+路径：设置-》更新和安全-》传递优化-》允许从其他电脑下载
 
 ## 以管理员身份运行程序
 **单次运行**
@@ -35,3 +36,43 @@ category: 工具
 
 ![|252x216](./attachments/Windows-3.webp)
 
+
+## 修改系统显示语言
+通常个人购买的PC安装的是家庭版，无法修改系统语言，需要升级到专业版
+
+1. 查看系统版本信息
+- 设置-》系统-》关于-》Windows 规格
+- cmd（win + R 快捷键）：winver
+2. 升级到专用版本
+设置-》更新和安全-》激活-》更改产品密钥-》输入密钥，确认升级
+
+3. 添加带有语言包的语言
+设置-》时间和语言-》语言-》添加语言
+
+>[!note]
+>如果通过软件（如WUB）禁用了系统更新，需要先启用更新，然后进行下载，否则可能下载失败，错误码：# 0x80073d01
+
+![|248x95](./attachments/Windows-4.webp)
+4. 选择 `Windows 显示语言`
+重启系统后生效
+![|305x68](./attachments/Windows-5.webp)
+
+5. 激活 Activation
+>
+>We can't activate Windows on this device because you don't have a
+valid digital license or product key. If you think you do have a valid
+license or key, select Troubleshoot below. Error code: OxC004C060
+
+使用网上的密钥升级系统后无法激活系统，无法使用一些系统功能
+如：
+![|304x60](./attachments/Windows-6.webp)
+	无法设置桌面
+通过 [CMWTAT_Digital_Release_2_7_2_0](https://github.com/TGSAN/CMWTAT_Digital_Edition)激活系统
+- 下载程序
+- 管理员身份运行
+- 点击Active，等待激活完成
+![|251x141](./attachments/Windows-7.webp)
+	提示激活成功
+- 重启
+结果：
+![|299x102](./attachments/Windows-8.webp)

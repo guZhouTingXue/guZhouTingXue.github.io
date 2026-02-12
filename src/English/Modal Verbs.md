@@ -1,4 +1,4 @@
 ---
 category: English
 ---
-# 7.6 Model Verbs
+# 7.6 Modal Verbs
