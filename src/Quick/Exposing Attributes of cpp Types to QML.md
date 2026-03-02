@@ -283,7 +283,7 @@ private:
 ```
 
 效果：
-``` output
+``` 
 qml: Rod
 qml: Ade
 ```
@@ -393,7 +393,7 @@ public slots:
 ```
 	MouseArea 定义了一个鼠标区域（这里填充整个窗体），点击后调用board 的method
 效果：
-``` title=output
+```txt title=output
 Called the C++ method with "Hello from QML"
 qml: Result of postMessage(): hello QML
 Called the C++ slot
@@ -411,7 +411,7 @@ board 可以使用属性定义的形式：
 property MessageBoard board
 ```
 报错：
-``` title=error
+```txt title=error
  TypeError: Cannot call method 'postMessage' of null
 ```
 
@@ -439,7 +439,7 @@ int main(int argc, char *argv[])
 	2.setInitialProperties（）要在 load之前
 	
 QML 定义property
-``` title=Main.qml
+```js title=Main.qml
     required property MessageBoard board
 
 ```
@@ -475,7 +475,7 @@ public slots:
 ```
 
 结果：
-``` title=output
+```txt title=output
 Called the C++ slot
 Called the refresh(QString): "Hello from QML"
 ```
@@ -518,7 +518,7 @@ js中function 是对象，通过call 可以指定this
 注意：原文档中 没有给child 设置objectName，所以其objectName 是空的“”、
 
 结果：
-``` title=output
+```txt title=output
 Calling C++ methods with 'this' objects different from the one they were retrieved from is broken, due to historical reasons. The original object is used as 'this' object. You can allow the given 'this' object to be used by setting 'pragma NativeMethodBehavior: AcceptThisObject'
 invoked on "child"
 ```
@@ -530,7 +530,7 @@ invoked on "child"
 pragma NativeMethodBehavior: AcceptThisObject
 ```
 结果：
-``` title=output
+```txt title=output
 invoked on "parent"
 ```
 
@@ -562,7 +562,7 @@ signals:
 ```
 	
 结果：
-``` title=output
+```txt title=output
 qml: New message received: animal
 ```
 

@@ -26,7 +26,7 @@ node_modules/  package-lock.json  package.json  src/  tsconfig.json
 
 ## 部署到github
 部署的文档路径配置：
-``` title=theme.ts
+```ts title=theme.ts
 export default hopeTheme({
 docsDir: "src",
 })

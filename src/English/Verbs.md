@@ -20,7 +20,7 @@ category: English
 - 不能独立作谓语，必须与一定的助动词结合，一起构成复合谓语 或 充当其他句子成分-》不会受到主语（人称、数）的限制：非限定动词 - Non-finite Verb
 
 #### Finite Verb
-在表示语法概念中的限定时，finite的反义词是Non-finite。其他情况反义词是infinite
+在表示语法概念中的限定时，finite的反义词是Non-finite。其他情况finite - 有限的反义词是 infinite - 无限的。
 
 | example                                                 | predicate  | verb  |              |
 | ------------------------------------------------------- | ---------- | ----- | ------------ |
@@ -31,9 +31,9 @@ category: English
 #### Non-finite Verb
 - Infinitive
 
-| 例句                                        | 句子成分 | 助动词 | 说明                                                |
-| ----------------------------------------- | ---- | --- | ------------------------------------------------- |
-| He is able `to read and write` in English | 复合谓语 |     | 不懂，这里is 是系动词吧，然后able是形容词作表语。谁知和后面 to read 复合的助动词？ |
+| 例句                                        | 句子成分 | 动词         | 说明                                                                                                                |
+| ----------------------------------------- | ---- | ---------- | ----------------------------------------------------------------------------------------------------------------- |
+| He is able `to read and write` in English | 复合谓语 | read、write | 把is able to 看作是情态助动词 - 整体相当于can，read 当作是谓语动词《=》He can read in English. to read 不能单独作谓语，不能说：He to read in English. |
 
 - Participle
 	- The Present Participle
@@ -41,4 +41,6 @@ category: English
 - Gerund
 
 
+
+## 规则动词 和 不规则动词
 

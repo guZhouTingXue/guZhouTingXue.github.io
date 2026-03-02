@@ -12,7 +12,7 @@ tags:
 :::tabs
 @tab OrgMode 
 实现：
-``` plantuml
+```
 @startmindmap
 * root node
 	** some first level node
@@ -32,7 +32,7 @@ tags:
 
 @tab Markdown 
 实现：
-``` plantuml
+```
 @startmindmap
 * root node
 	* some first level node
@@ -90,6 +90,10 @@ export default hopeTheme({
 # 一级标题
 ## 二级标题
 - 子项目: 使用markdown 语法
+- 链接
+  - <https://markmap.js.org/>
+  - [markmap](https://markmap.js.org/)
+  - [Obsidian Base](/工具/Obsidian%20Bases.html)  
 - **粗体**, ~~删除线~~，*斜体*，==高亮==
 - 跨行
   文本
@@ -104,8 +108,10 @@ export default hopeTheme({
 
 项目可以是代码块，但是如果包含了代码块，那么markmap 要使用 4个\` 字符，否则markmap的\` 会和项目代码块中的\` 匹配导致呈现效果有问题
 
-
-
-
+如果要链接到本地路径html或是要指定链接名称，使用下面的格式：
+```
+[名称](链接地址)
+```
+注意md文件对应的html格式：空格使用%20代替
 
 

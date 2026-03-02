@@ -58,14 +58,14 @@ category: English
 
 **common verbs**
 
-| word      | meaning                                                                   | examples                                                | 含义  | 区别  |
-| --------- | ------------------------------------------------------------------------- | ------------------------------------------------------- | --- | --- |
-| propose   | to formally suggest sth as a possible plan or action                      | At the meeting a new advertising campaign was proposed. |     |     |
-| suggest   | to mention a plan or an idea that you have for sb to discuss or consider  | Tony suggested going out for a walk.                    |     |     |
-| advise    | to tell sb what you think they should do                                  | I would strongly advise you to take the job.            |     |     |
-| recommend | to say that sb/sth is good and that sb should try or use them or it       | Which film would you recommend?                         |     |     |
-| request   | to ask for sth                                                            | Passengers are requested not to smoke on this bus.      |     |     |
-| insist    | to say strongly that you must have or do sth, or that sb else must do sth | He always insists on the best.                          |     |     |
+| word      | meaning                                                                   | examples                                                | 语气    | 使用场景/含义                  |
+| --------- | ------------------------------------------------------------------------- | ------------------------------------------------------- | ----- | ------------------------ |
+| propose   | to formally suggest sth as a possible plan or action                      | At the meeting a new advertising campaign was proposed. | 正式    | 提出计划或方案                  |
+| suggest   | to mention a plan or an idea that you have for sb to discuss or consider  | Tony suggested going out for a walk.                    | 委婉    | 提议。参考                    |
+| advise    | to tell sb what you think they should do                                  | I would strongly advise you to take the job.            | 权威    | 医生-》患者                   |
+| recommend | to say that sb/sth is good and that sb should try or use them or it       | Which film would you recommend?                         |       | 电影推荐。/带有比较，经过自身判断之后做出的评价 |
+| request   | to ask for sth                                                            | Passengers are requested not to smoke on this bus.      | 礼貌/正式 | 书面通知                     |
+| insist    | to say strongly that you must have or do sth, or that sb else must do sth | He always insists on the best.                          | 强硬    |                          |
 
 **adjectives**
 

@@ -2,7 +2,7 @@
 category: English
 ---
 
-# 英语资源文件模板
+# Advanced Conditionals
 --- 
 <VidStack
 	src="/resources/English/7_Verbs/Advanced-Conditionals.mp3"

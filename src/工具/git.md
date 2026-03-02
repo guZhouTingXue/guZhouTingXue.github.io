@@ -141,7 +141,7 @@ graph RL
 
 master 是第一次提交时默认设置的分支名称（也可能叫main）
 查看分支信息：
-``` git
+```
 $ git branch -v
   Basic                                   4831457 更新ignore
 * ComboBox                                f5d5b9e ComboBox Model Roles

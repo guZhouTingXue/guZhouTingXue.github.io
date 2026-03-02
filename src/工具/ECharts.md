@@ -10,7 +10,7 @@ tags:
 > vuepress ECharts 图表不显示时没有错误提示，通过在线编辑器运行后再拷贝到文档中
 ## 在Vuepress中使用ECharts
 1. 安装
-``` nmp
+```bash 
 npm install -D echarts
 ```
 2. 配置

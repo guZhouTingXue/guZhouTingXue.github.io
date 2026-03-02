@@ -180,7 +180,7 @@ end
 :::
 
 
-``` mk title="选项卡语法"
+```txt title="选项卡语法"
 选项卡组1
 ::: tabs#fruit
 @tab 开始 #1

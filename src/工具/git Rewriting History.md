@@ -42,7 +42,7 @@ Date:   Sun Sep 28 23:04:16 2025 +0800
 
 实现：
 1. 启动
-``` git
+```
 git rebase -i e0e6e
 ```
 

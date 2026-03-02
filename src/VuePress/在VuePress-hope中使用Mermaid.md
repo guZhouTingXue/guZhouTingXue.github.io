@@ -9,7 +9,7 @@ tags:
 npm i -D mermaid
 ```
 2. 配置
-``` title=theme.ts
+```ts title=theme.ts
 hopetheme({
 	markdown: {
 		mermaid: true,

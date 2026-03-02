@@ -76,3 +76,71 @@ license or key, select Troubleshoot below. Error code: OxC004C060
 - 重启
 结果：
 ![|299x102](./attachments/Windows-8.webp)
+
+
+##  Windows Terminal
+>[!info]
+>The Windows Terminal is a modern, fast, efficient, powerful, and productive terminal application for users of command-line tools and shells like Command Prompt, PowerShell, and WSL. Its main features include multiple tabs, panes, Unicode and UTF-8 character support, a GPU accelerated text rendering engine, and custom themes, styles, and configurations.
+
+[项目地址](https://github.com/microsoft/terminal?tab=readme-ov-file)
+[说明文档](https://learn.microsoft.com/en-us/windows/terminal/)
+**Installing**
+进入 Releases 页面，在 Assets 下找到后缀为 msixbundle 的链接（文件名称过长不显示后缀，可通过鼠标停留在链接上方，查看浏览器左下角完整的链接路径中的文件名称）
+
+双击运行安装程序
+![|300x176](./attachments/Windows-9.webp)
+
+>[!note]
+>不知道是不是我关闭了更新的原因，点击install 后就没有反应了。在启用更新后再进行install会进入下载界面。
+
+**修改默认terminal**
+1. 最后一个标签左侧下拉箭头-》Settings
+![|300x239](./attachments/Windows-12.webp)
+
+2. Startup -》 Default terminal application -> Windows Terminal
+![](./attachments/Windows-13.webp)
+
+3. 设置完成后通过鼠标右键打开的terminal 使用的就是 windows terminal
+![](./attachments/Windows-14.webp)
+
+效果：
+![|398x141](./attachments/Windows-11.webp)
+- multiple tabs: 可以在一个窗口内以标签页的形式容纳多个窗口
+	- 可以分离或合并窗口
+- panes：可以在多个方向分屏
+
+## UniGetUI
+>[!info]
+>- An intuitive GUI for the most common CLI package managers for Windows 10 and 11
+>- An application that makes managing your software easier, by providing an all-in-one graphical interface for your command-line package managers.
+
+[项目地址](https://github.com/marticliment/UnigetUI)
+
+效果：
+![|500x276](./attachments/Windows-10.webp)
+
+
+## 输入法配置
+**中文输入法中的中英文切换**
+1.  切换到中文输入法
+![](./attachments/Windows-15.webp)
+中：当前处于 Chinese Mode
+拼：当前为中文输入法
+2. 鼠标右键点击 “中”，选择Settings
+![](./attachments/Windows-16.webp)
+3. 进入按键设置
+![|299x85](./attachments/Windows-17.webp)
+4. 配置mode 切换按键
+![|201x148](./attachments/Windows-18.webp)
+
+
+**在不同输入法之间进行切换**
+![|301x388](./attachments/Windows-19.webp)
+	
+	配置路径：Settings-》Devices-》Typing-》Advanced keyboard settings-》Input language hot keys
+	
+![|302x324](./attachments/Windows-20.webp)
+	Between input languages-》Change Key Sequence...
+	
+![|297x153](./attachments/Windows-21.webp)
+
