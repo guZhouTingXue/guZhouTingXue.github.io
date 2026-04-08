@@ -46,3 +46,25 @@ polite 是 礼貌的，客气的。diplomatic 只知道它和polite 是并列的
 用自己的话表述，如何向他人介绍
 
 
+## 检验
+如何记录背诵的结果？
+比如 在 `Are you in the mood to learn the subjunctive` 中，一段背诵的结果如下：
+
+Fortunately, there <mark>are</mark> <mark>only</mark> a few <mark>adjectives</mark> that are used in this form of the subjunctive. Here are some example<mark>s</mark>:
+
+- It is essential that you bring your wallet.
+
+- It is <mark>imperative </mark>that you read the instructions.
+
+其中被标记的部分为出错的内容。
+想法：
+1. 可以在原文 和 背诵结果之间进行切换
+可以选择是否显示出错的内容本身，比如 example。或者 是对相应的正确内容进行高亮。
+2. 对每次背诵出错的内容进行统计及分析
+
+如何统计错误？
+错误的类型：
+- 句型结构
+- 单词
+- 标点符号
+根据错误类型采用适当的形式进行统计

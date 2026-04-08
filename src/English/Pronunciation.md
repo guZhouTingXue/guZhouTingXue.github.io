@@ -1,5 +1,6 @@
 ---
 category: English
+star: "true"
 ---
 
 # Pronunciation
@@ -23,6 +24,7 @@ category: English
 **音标 Phonetic Symbols**
 >音素的书面符号
 
+### 分类
 <table>  
     <caption>        Underhill 音标表  元音
     </caption>  
@@ -60,7 +62,7 @@ category: English
  共有21个元音
  12个单元音（Monophthongs）
 	 5个长元音（Long Vowels）：iː,  ɜː, uː, ɔː, ɑː
-	 7个短元音（Short Vowels）： ɪ, ə, u, ɒ, ʌ, e, æ
+	 7个短元音（Short Vowels）： ɪ, ə, ʊ, ɒ, ʌ, e, æ
  长音符号实际是
  ![](./attachments/Pronunciation-4.webp)
 	 顶点相对的两个三角形
@@ -68,6 +70,13 @@ category: English
  9个双元音（Diphthongs）：
 	  合口双元音（Falling Diphthongs）：ei, eɪ, əʊ, aɪ, aʊ, ɔɪ
 	  集中双元音（Rising Diphthongs）：ɪə, eə, ɔə, ʊə
+
+**旧版音标**
+短元音：<font color="#ff0000">i</font>, ə, <font color="#ff0000">u</font>, <font color="#ff0000">ɔ</font>, ʌ, e, æ
+长元音：iː, <font color="#ff0000">əː</font>, uː, ɔː, aː
+双元音
+	合口：ei, əu, ai, au, ɔi
+	集中：iə, ɛə, ɔə, uə
 
 <table>
 	<caption>辅音</caption>
@@ -121,7 +130,7 @@ category: English
 
 ---
 
-舌位图
+### 舌位图
 :::tabs
 @tab Modern English
 ![|393x277](./attachments/Pronunciation-1.webp)
@@ -178,9 +187,11 @@ category: English
 
 **调音过程 - articulatory process**
 舌、唇、上颚、咽部 之间的配合
-## iː, ɪ
 
-### 前置
+## Vowels
+### iː, ɪ
+
+#### 前置
 
 >[!info]
 >要领 和 特点
@@ -192,7 +203,7 @@ category: English
 - 不要用中文的音来发英文的音
 - 练习发音时可能会有不适应的地方，用夸张来让身体熟悉、适应不同的发音方式
 
-### 理解长、短音
+#### 理解长、短音
 长音 iː
 ![i:](attachments/pronunciation-i-long.gif)
 >核心
@@ -218,7 +229,7 @@ category: English
 - i: 有一个过程
 - ɪ 开始后马上结束
 
-#### 长、短音的区分
+##### 长、短音的区分
 >一般情况下的发音方式决定长、短
 
 一般情况：陈述语气，不带感情。
@@ -230,7 +241,7 @@ category: English
 暂时的理解：长音有一个发音过程，和其发音方式有关。如咧开嘴，这个咧的动作就需要一定的时间，所以自然而然的其发音时间就要长于不需要过程的音。也是这个元音导致气流持续动过-》持续振动产生声音。
 
 
-## uː 
+### uː 
 **兔**
 >传统英音中的这个音，舌位后，高。开口很小。需圆唇。和普通话中“姑”的韵母u基本一致，只是拼音u更加圆唇。
 >现代英音中的这个（音标）舌位前移，朝着普通话Ü （绿）的舌位方向靠拢。这一舌位前移导致圆唇度的进一步丧失，即嘴型略扁。
@@ -247,10 +258,60 @@ category: English
 - 音标替换，对比感受发音的差异
 - 借助 ”吁“（勒紧马套）的口型发uː 
 - 通过观察脸部肌肉是否发生变化，体会发音时力度的大小
-### 圆唇度 与 舌位的前后
 
-## ʊ
+### ʊ
+**兔**
+>需圆唇，但只需微微圆唇，发音比 /uː/ 更放松
 
+- book /bʊk/
+- look /lʊk/
+- good /gʊd/
+- took /tʊk/
+
+**孙**
+>嘴唇并不撅起
+>嘴唇放松 发音短促
+
+- could
+
+#### 圆唇度 与 舌位的前后
+<span style="background:#fff88f">问：</span>什么是圆唇？撅嘴是不是在做圆唇的动作？
+
+### e
+**兔**
+>发 /e/这个音，不需圆唇。在中文中也有，出现在某些韵母的结尾，比如“也（ye）”，“月（yue）”，“列（lie）”的尾音
+
+- bed
+- get
+- pet
+- let
+- met
+- set
+
+### ə
+**兔**
+>这是个舌位前后高低都在中间的元音。所以它被称作“中央元音”。
+>发这个音不需圆唇。嘴自然张开，唇和舌都自然放松，轻吐一口气，让声带振动。这种最放松状态下发出来的音就是中央元音 /ə/
+>如果把这个音重读（舌头和口腔肌肉紧张）并读足时长，它基本三就成了另一个元音
+>/ɜː/
+>英语中所有的元音字母，以及半元音字母（y）都可能发中央元音
+
+
+| A                    | O                     | E                    | I                    | U                     | Y          |
+| -------------------- | --------------------- | -------------------- | -------------------- | --------------------- | ---------- |
+| - about<br>- balloon | - memory<br>- freedom | - taken<br>- problem | - family<br>- pencil | - supply<br>- support | - analysis |
+
+### ɜː
+
+### ʌ
+
+### ɔː
+
+### æ
+
+### ɑː
+
+### ɒ
 
 
 ## 资源

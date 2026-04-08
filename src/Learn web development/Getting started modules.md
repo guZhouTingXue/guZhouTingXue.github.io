@@ -7,6 +7,8 @@ https://developer.mozilla.org/en-US/docs/Learn_web_development
 ## Code editors
 **Exploring VS Code extensions**
 安装 `Prettier` 插件
+> Prettier is an opinionated code formatter.
+
 参考：
 https://www.freecodecamp.org/chinese/news/how-to-use-prettier-in-visual-studio-code/
 

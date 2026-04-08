@@ -38,16 +38,33 @@ category: English
 ```
 
 ## Words in This Story
-| word | meaning | 出处  | 含义  | 关联  |
-| ---- | ------- | --- | --- | --- |
-|      |         |     |     |     |
+| word             | meaning                                                          | 出处                         | 含义    | 关联                    |
+| ---------------- | ---------------------------------------------------------------- | -------------------------- | ----- | --------------------- |
+| regret /rɪˈgret/ | to feel sad or sorry about(something that you did or did not do) | They often show regret,... | 懊悔；遗憾 | regretful;regretfully |
 
-## 文档
+## 原文
+```txt
+This week, we are going to talk about the past unreal conditional. Past unreal conditionals are often used to express wishes about the past. They often show regret, or sad feelings about something that happened in the past. Here's an example:
+If I had studied, I would have passed the test.
+In this example, there is an implied wish that the speaker had studied.
+A conditional sentences has two parts. The first part is the if clause: "If I had studied." The second part is the result clause: "I would have passed the test."
+To form the past unreal conditional, use the **past perfect** in the if clause. Use had followed by a past **participle** verb to form the past perfect. In the result clause, use would have followed by the past participle.
 
----
-<PDF url="/resources/English/7_Verbs/Advanced-Conditionals.pdf" />
+Use past unreal conditionals to talk about how you would have acted differently if you had had more information. Basically, *if I had known A, I would have done B*. Imagine you brought chocolate for a co-worker. You didn't know it at the time, but your co-worker was diabetic. In this situation, you could say, "If I had known you were diabetic, I would not have brought chocolate."
 
----
+Some Americans use the simple past in the if clause of a past unreal conditional. For example, there's an old song called, "If I knew you were coming, I'd have baked a cake." In formal speech or writing the correct form is, "If I had known you were coming, I would have backed a cake." There is often a difference between how grammar is taught and how ordinary people use it in conversation.
+
+A conditional sentence can start with the if clause, or the result clause. In the classic American film `It's a Wonderful Life`, the main character George Bailey is thinking about killing himself. In a moment of sadness, George says that life would have been better if he had never been born. Listen to this dialog between George and his guardian angel, Clarence.
+
+Clarence: So you still think killing yourself would make everyone fell happier?
+George: Well, I don't know. I guess you're right. I supposed it would've been better if I'd never been born at all.
+Clarence: What did you say?
+George: I said I wish I had never been born.
+
+Notice how George puts the result clause first when he says, "I suppose it would have been better if I had never been born." George also shortens "would have" to "would've" and "I had" to "I'd". Native speakers often use contractions with the words "had" and "have." That means a past unreal conditional often have two contractions in it - an extra challenge for English learners.
+```
+
+
 
 ## 资源
 [mp3](/resources/English/7_Verbs/Advanced-Conditionals.mp3)

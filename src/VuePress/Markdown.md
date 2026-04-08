@@ -220,17 +220,52 @@ export default hopeTheme({
 ```
 
 **示例**
-::: preview 可选标题
-``` txt
-\::: preview 可选标题
+```
+:::preview 可选标题
 内容
-\:::
+:::
+```
+实际效果：
+:::preview
+```component VPBanner
+{
+  "title": "mingStudent",
+  "desc": "hello world!",
+  "background": "rgba(253, 230, 138, 0.15)"
+}
 ```
 :::
 
-。。。问题：<mark style="background: #FFF3A3A6;">在代码块中的\::: 会匹配到代码块外的::: </mark>
-
 问：<span style="background:#fff88f">如何设置折叠状态？</span>
+
+**显示内容 和 实现不一致**
+使用`<VPPreview>` 组件
+```
+<VPPreview>
+<template #code>
+具体实现
+</template>
+<template #content>
+实际显示
+</template>
+</VPPreview>
+```
+效果：
+
+---
+
+<VPPreview>
+<template #code>
+具体实现
+</template>
+<template #content>
+实际显示
+</template>
+</VPPreview>
+---
+
+<span style="background:#fff88f">问：</span>好像不能将图片作为实际显示结果？
+
 ## 未归档
 表格：表格内换行 使用\<br>
 
