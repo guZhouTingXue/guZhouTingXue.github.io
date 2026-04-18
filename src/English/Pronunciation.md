@@ -9,6 +9,7 @@ star: "true"
 - [英语兔 音标合集](https://www.bilibili.com/video/BV1iV411z7Nj?spm_id_from=333.788.videopod.episodes&vd_source=6d8ce529a71ce9e817753804f6e733cc)
 - [孙志立简明英语发音教程 - 美音](https://www.bilibili.com/video/BV1mtR3YREiM/?spm_id_from=333.337.search-card.all.click&vd_source=6d8ce529a71ce9e817753804f6e733cc)
 - [在线音标输入](https://ipa.typeit.org/)
+- [知乎 国际音标速成教程](https://www.zhihu.com/tardis/zm/art/136256314?source_id=1005)
 ---
 
 ## 基本概念
@@ -131,17 +132,13 @@ star: "true"
 ---
 
 ### 舌位图
-:::tabs
-@tab Modern English
-![|393x277](./attachments/Pronunciation-1.webp)
+![元音的舌位照片以及其在元音表中的位置](./attachments/Pronunciation-3.webp)
 
-@tab wiki
-![|401x304](./attachments/Pronunciation.webp)
+- 圆点表示发音时舌面的最高点
+- 元音的三要素：舌位的高低、前后 及 是否圆唇（圆唇度）
+>由于舌头有自主性，所以在开口度不变的情况下，舌位仍可以有一定幅度的升降。就是说，用舌位高低能涵括开口度，反之不一定能
 
-:::
-
-- 圆点表示发音时舌头的最高点
-
+我的理解：在口型-开口度不变的情况下，舌头能够 自然平放（低）、向外伸出（中） 和 翘起（高），改变舌位高低从而影响发音。也就是可以开口较小，舌位高，也可以开口较大，但是舌位低。这就是为什么不同的人发同一个音的时候，开口度不一致的原因。
 
 ## 发音的过程
 [十分钟语言学 | 语音学 人是怎么发音的？](https://www.bilibili.com/video/BV15b411w7WG?spm_id_from=333.788.player.switch&vd_source=6d8ce529a71ce9e817753804f6e733cc&trackid=web_related_0.router-related-2479604-dplt2.1770877451212.59)

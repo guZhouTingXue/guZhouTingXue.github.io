@@ -38,9 +38,11 @@ category: English
 ```
 
 ## Words in This Story
-| word             | meaning                                                          | 出处                         | 含义    | 关联                    |
-| ---------------- | ---------------------------------------------------------------- | -------------------------- | ----- | --------------------- |
-| regret /rɪˈgret/ | to feel sad or sorry about(something that you did or did not do) | They often show regret,... | 懊悔；遗憾 | regretful;regretfully |
+| word                 | meaning                                                          | 出处                                     | 含义    | 关联                    |
+| -------------------- | ---------------------------------------------------------------- | -------------------------------------- | ----- | --------------------- |
+| regret /rɪˈgret/     | to feel sad or sorry about(something that you did or did not do) | They often show regret,...             | 懊悔；遗憾 | regretful;regretfully |
+| emphasis/ˈemfəsɪs/   | giving special importance or attention to sth                    |                                        |       |                       |
+| emphasize/ˈemfəsaɪz/ | to put emphasis on sth                                           | to emphasize the effect in the present |       |                       |
 
 ## 原文
 ```txt
@@ -62,9 +64,41 @@ Clarence: What did you say?
 George: I said I wish I had never been born.
 
 Notice how George puts the result clause first when he says, "I suppose it would have been better if I had never been born." George also shortens "would have" to "would've" and "I had" to "I'd". Native speakers often use contractions with the words "had" and "have." That means a past unreal conditional often have two contractions in it - an extra challenge for English learners.
+
+Sometimes speakers want to express how something that did not happen in the past has an effect in the present. For example, "If I had been born in China, I would speak Chinese." Or "If I had quit university, I would not have this job." These are called mixed conditionals. In a mixed conditional, the if clause remains in the past perfect. But the result clause changes to the simple present to emphasize the effect in the present.
+
+To emphasize a feeling of regret, add "only" to the if clause. Listen to this sad song by country singer Reba McEntire.
+
+"If I had only known it was the last walk in the rain,
+
+I'd keep you out for hours in the storm."
+
+This song is an example of a mixed conditional. The if clause "If I had only known it was the last walk in the rain" is in the past perfect. But the result clause, "I'd keep you out for hours in the storm" is in the simple present. The singer is emphasizing her present feelings about something that did not happen in the past.
+
+Past unreal conditional are complex grammar structures. Make sure you have mastered the past perfect, the present perfect, and irregular verbs before studying advanced conditionals. For a simpler lesson on conditionals, see our previous episode of Everyday Grammar called "Introducing Conditions."
+
+When you are ready, a good way to practice past unreal conditionals is to ask your English-speaking friends if they have any regrets. You could ask "If you could change something about your past, what would you change?"
+
+We'll leave you now with another song of regret by Brook Benton:
+
+Darling if I had known I'd miss you
+
+like I know since you've gone,
+
+things would have been different
+
+if only I had know
 ```
 
+- to put/lay/place emphasis on something: pdf 文档中 to emphasis the effect 应该是 to emphasize 
 
+
+
+
+|                       | If clause<br>past perfect | Result clause                |
+| --------------------- | ------------------------- | ---------------------------- |
+| **Past Unreal**       |                           | would have + past particilpe |
+| **Mixed Conditional** |                           | would simple + present       |
 
 ## 资源
 [mp3](/resources/English/7_Verbs/Advanced-Conditionals.mp3)

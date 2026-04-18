@@ -1,5 +1,6 @@
 ---
 category: LearnWebDevelopment
+order: "2"
 ---
 
 # Creating the content
@@ -72,18 +73,18 @@ category: LearnWebDevelopment
 - structure
 - to behave in a certain way
 
-| 内容/element       | attribute                                       | text content | 说明                                                                              |
-| ---------------- | ----------------------------------------------- | ------------ | ------------------------------------------------------------------------------- |
-| \<!doctype html> |                                                 |              | 前置，没有额外作用，历史原因保留                                                                |
-| html             | long: sets the primary language of the document |              | warps all the content on the entire page，页面中的所用内容都包含在html element 下             |
-| head             |                                                 |              | 网站相关配置                                                                          |
-| meta             | charset：文档字符编码                                  |              |                                                                                 |
-| meta             | name                                            |              | name 和 content 是配合在一起的吗？为什么不是 viewport="width=..."                              |
-| title            |                                                 | My test page | 浏览器中标签栏显示的文本内容以及收藏为书签时的内容<br>![](./attachments/Creating%20the%20content-3.webp) |
-| body             |                                                 |              | contains all the content that you want to show to web users                     |
-| p                |                                                 |              | paragraph                                                                       |
-| ul               |                                                 |              | unordered list 无序列表                                                             |
-| li               |                                                 |              | represent an item in a list                                                     |
+| 内容/element       | attribute                                       | text content | 说明                                                                                              |
+| ---------------- | ----------------------------------------------- | ------------ | ----------------------------------------------------------------------------------------------- |
+| \<!doctype html> |                                                 |              | 前置，没有额外作用，历史原因保留                                                                                |
+| html             | long: sets the primary language of the document |              | warps all the content on the entire page，页面中的所用内容都包含在html element 下                             |
+| head             |                                                 |              | 网站相关配置，包含keywords, page description-用于搜索引擎搜索时相关内容, CSS-用于格式化显示内容, character set declarations... |
+| meta             | charset：文档字符编码                                  |              |                                                                                                 |
+| meta             | name                                            |              | name 和 content 是配合在一起的吗？为什么不是 viewport="width=..."                                              |
+| title            |                                                 | My test page | 浏览器中标签栏显示的文本内容以及收藏为书签时的内容<br>![](./attachments/Creating%20the%20content-3.webp)                 |
+| body             |                                                 |              | contains all the content that you want to show to web users                                     |
+| p                |                                                 |              | paragraph                                                                                       |
+| ul               |                                                 |              | unordered list 无序列表                                                                             |
+| li               |                                                 |              | represent an item in a list                                                                     |
 
 elements 有两种类型：
 

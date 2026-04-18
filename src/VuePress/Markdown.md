@@ -329,3 +329,13 @@ error RangeError: Maximum call stack size exceeded
 
 ```
 
+
+**不显示mermaid**
+ob中效果：
+![|200x227](./attachments/Markdown-5.webp)
+能够显示mermaid
+
+网站：
+![|199x184](./attachments/Markdown-6.webp)
+显示空白，但是占据了空间
+。。。不知道什么原因，仍在加载？但是也没看到“转圈圈”

@@ -4,6 +4,10 @@ star: "true"
 ---
 
 # Collins COBUILD
+一些标记的含义
+- \[+of]: 后接of
+- \[+ v-ing]: 这里ing 表示的是动名词 还是 现在分词？
+- \[+ to-inf]: 后接动词不定式 inf - infinitive
 
 ## <font color="#0070c0">abi|lity</font> /əˈbɪlɪtɪ/
 
@@ -406,6 +410,204 @@ young, new
 2. Ageing is the process of becoming old.
 - Her skin showed signs of ageing.
 ---
+## age group (age groups)
+An **age group** is all the people between two particular ages.
+- The research studied the eating habits of people in the 18-25 age group.
+**in** an age group
+the x **to** y age group
+the **over-x/under-x** age group
+**all/different** age groups
+the **older/younger** age group
 
+generation, peer group
 
+---
+## agree /əˈgriː/
+If you **agree with** an action or suggestion, you think it is right.
+- \[+ with] I don't agree with what they're doing.
+- \[+ with] Not all scientists agree with this view.
+
+agree **with** something
+**generally/broadly/totally** agree with something
+agree with a **statement/assessment/finding/view** 
+
+agree in principle
+disagree
+
+---
+## ag|ri|cul|ture /ˈægrɪkʌltʃə/
+Agriculture is farming and the methods that are used to look after crops and animals.
+- The Ukraine is strong both in industry and agriculture.
+
+farming 
+
+## ag|ri|cul|tur|al /ˌægrɪˈkʌltʃərəl/
+- agricultural land
+- The price of corn and other agricultural products has increased
+agricultural **land**
+an agricultural **product/subsidy/worker**
+the agricultural **industry**
+
+---
+## air /eə/
+**Air** is the mixture of gases which forms the Earth's atmosphere and which we breathe.
+- Every living creature needs air to breathe.
+- She breathed in the cold air.
+- Cars are a major cause of air pollution.
+
+**cold/warm/hot** air
+**fresh/clean** air
+air **pollution/quality**
+
+---
+## alike /əˈlaɪk/
+1. If two or more things are alike, they are similar.
+- The two brothers look very alike.
+
+**look/sound** alike
+similar
+different
+
+2. **Alike** means in a similar way.
+- They even dressed alike.
+- The article makes the false assumption that all men and women think alike.
+
+**dress/think** alike
+similarly
+differently
+
+3. You use alike after mentioning two or more people, groups, or things in order to emphasize that you are referring to both or all of them.
+- The techniques are being used almost everywhere by big and small companies alike.
+
+equally
+
+---
+## al|low
+1. If someone is allowed to do something, it is all right for them to do it.
+- \[+ to-inf] The children are not allowed to watch violent TV.
+- \[+ to-inf] The Government will allow them to advertise on radio and television.
+- Smoking will not be allowed.
+
+permit, let
+forbid
+
+2. If you are allowed something, you are given permission to have it or are given it.
+- Gifts like chocolates or flowers are allowed.
+- He should be allowed the occasional treat.
+
+permit
+forbid, ban
+
+3. If you allow something to happen, you do not prevent it.
+- \[+ to-inf] He won't allow himself to fail.
+- \[+ to-inf] If the soil is allowed to dry out the tree could die.
+
+permit, let
+prevent
+
+---
+## al|pha|bet
+An alphabet is a set of letters in a fixed order which is used for writing the words of a language.
+- The modern Russian alphabet has 31 letters.
+- By the age of six, most children know the alphabet.
+- 'A' is the first letter of the English alphabet.
+
+the **Greek/English/Russian** alphabet
+a letter of the alphabet
+
+## al|pha|beti|cal
+Alphabetical means arranged according to the normal order of the letters in the alphabetic.
+- The names are listed in alphabetical order.
+
+an alphabetical **list**
+in alphabetical order
+
+## al|pha|beti|cal|ly
+- The catalogue is arranged alphabetically by label name.
+
+**list/arrange** something alphabetically
+
+---
+## al|ter|na|tive
+1. An **alternative** is something you can use or do instead of something else.
+- \[+ to] New ways to treat arthritis may provide an alternative to painkillers.
+- This equipment is very expensive and we need to find a cheaper alternative.
+
+an alternative **to** something
+**provide/offer** an alternative
+**seek/consider/find** an alternative
+a **good/viable/cheap/safe** alternative
+
+2. An **alternative** plan or offer is one that you can use or do instead of the one you already have.
+- There were alternative methods of travel avaliable.
+- They had a right to seek alternative employment.
+
+other, alternate, different
+
+## al|ter|na|tive|ly
+You use **alternatively** to introduce a suggestion or to mention something different to what has just been stated.
+- Allow about eight hours for the drive from Calais. Alternatively, you can fly to Brive.
+
+---
+## al|though
+You use **although** to introduce a statement which contrasts with something else that you are saying.
+- Although I was only six, I can remember seeing it on TV.
+- Their system worked, although no one was sure how.
+
+however, even though
+
+---
+## amount 
+The **amount of** something is how much there is, or how much you have, need, or get.
+- \[+ of] He needs that amount of money to survive.
+- Apricots contain large amounts of vitamin A.
+- A certain amount of land is dedicated to roadways and parks
+
+an amount **of** something
+a **huge/enormous/large/significant** amount of something
+a **certain/small** amount of something
+**increase/reduce** the amount of something
+
+number, quantity, volume
+
+**USAGE: amount** or **number**?
+- There was only a small amount of water in the glass.
+- She was surprised at the large number of students in the class.
+---
+## an|cient
+**Ancient** means belonging to the distant past, especially to the period in history before the end of the Roman Empir.
+- They believed ancient Greece and Rome were vital sources of learning.
+
+an ancient **tradition/civilization**
+an ancient **monument/temple/ruin/text** 
+ancient **history**
+an ancient **Egyptian/Greek/Chinese** thing
+
+modern
+
+---
+## an|nounce
+If you announce something, you tell people about it publicly or officially.
+- \[+ that] He will announce tonight that he is resigning from office.
+Q: 为什么这里用的是 is resigning ？辞职还能是进行时？正在走程序？
+- The company announced plans to sell music over the Internet.
+- \[+ that] It was announced that the groups have agreed to cease-fire.
+
+announce **plans/results/details**
+announce a **deal/agreement/decision**
+
+declare
+
+## an|nounce|ment
+- Sir Robert made his announcement after talks with the President.
+- There has been no formal announcement by either government.
+
+**make** an announcement
+a **formal/official/public** announcement
+a **surprise** announcement
+
+declaration, statement
+
+---
+## an|nual
 
