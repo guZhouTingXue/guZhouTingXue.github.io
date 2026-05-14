@@ -69,12 +69,8 @@ category: English
 | syllable  |                                                   | they are shortened and often fall on unstressed syllables. | 音节        |                             |
 | rapid     | happening very quickly or moving with great speed | Modals in rapid speech                                     | 快速的       | n. rapidity<br>adv. rapidly |
 
-## 文档
+## 原文 
 
----
-<PDF url="/resources/English/7_Verbs/Modal/You-Had-Better-Learn-Modals.pdf" />
-
----
 
 ## 资源
 [mp3](/resources/English/7_Verbs/Modal/You-Had-Better-Learn-Modals.mp3)

@@ -3,9 +3,6 @@ category: 工具
 ---
 # LocalSend
 
-## Send
-
-
 ## Receive
 ![|304x291](./attachments/LocalSend.webp)
 - History：接收历史
@@ -13,10 +10,9 @@ category: 工具
 - Off/On：关闭/打开
 - Favorites：只接收 在Send的 Search Devices 中设置为Favorite的设备发送的消息
 
-
+每次接收完后需要点击done，否则无法再次接收其他数据（发送端提示： `The recipient is busy with another request`）
 ## Send
 ![|302x289](./attachments/LocalSend-1.webp)
-
 
 ## 问题
 

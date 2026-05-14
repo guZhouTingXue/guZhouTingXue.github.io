@@ -610,4 +610,12 @@ declaration, statement
 
 ---
 ## an|nual
+1. Annual events happen once every year.
+- the Labour Party's annual conference
+- In its annual report, UNICEF says at least 40,000 children die every day.
+2. Annual quantities or rates relate to a period of one year.
+- The electronic and printing unit has annual sales of about $80 million.
+
+an annual **conference/event**
+an annual **holiday/celebration**
 

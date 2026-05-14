@@ -68,6 +68,77 @@ $$
 
 如果是要链接到当前文档的内的heading，直接使用\#
 
+### Link to a block in a note
+1. 什么是block？
+>A block is a unit of text in your note, such as a paragraph, block quote, or list item.
+
+2. 如何确定一个block？
+- simple paragraphs: place a blank space followed by a caret \^ and the block identifier at the end of the line
+
+示例：
+这是一个simple paragraph 在段落的末尾，空一格，使用caret+block identifier 设置block ^37066d
+
+>[!note]
+>这里paragraph的范围，最好是前后都有空行
+
+- structured blocks(lists, quotations, callouts, tables): the block identifier should be on a separate line, with a blank line before and after
+示例：
+下面是一个table，将他定义为一个blcok
+
+| 序号  | 名称  |
+| --- | --- |
+| 1   | M   |
+
+^394800
+
+- For specific lines within a list: can be placed directly on a bullet point
+示例：
+链接到一个列表中的某一项
+下面是一个列表
+- 第一项
+- 第二项
+	^37006f
+- 第三项
+
+>[!warning]
+>do not support links to specific parts of quotations, callouts and tables.
+
+block identifier 可以包含Latinletters, numbers, and dashes
+
+这是一个使用 human-readable block identifier 的paragraph ^human-readable-block-identifier
+
+<span style="background:#fff88f">问：</span> block identifier 除了 unique 以及组成的字符 还有其他要求吗？比如位数，首位字符等
+对于unique，是不能定义两个同名identifier，还是定义后会出错？
+
+3. 如何link to a block？
+>You can link to a block by adding \#\^ at the end of your link destination, followed by a unique block identifier.
+
+For example:
+链接到上面定义的simple paragraph block [[#^37066d]]
+链接到上面定义的table block [[#^394800]]
+链接到specific line block [[#^37006f]]
+链接到human-readable identifier block [[#^human-readable-block-identifier]]
+
+效果：
+![|500x263](attachments/Link-to-a-block-in-a-note.gif)
+
+<span style="background:#fff88f">问：</span>这里都是链接到当前文档内定义的blcok，如果要链接到其他文档中定义的block，需要通过 目标文档+\#\^ 来链接到block吗？
+链接到test中的block
+[[obsidian test.md#^test-block]]
+
+>[!warning]
+>Block references are specific to Obsidian and not part of the standard Markdown format.
+
+只能在Obsidian 中使用blcok link，可惜
+### Change the link display text
+1. [[Obsidian Help]]
+2. [[Obsidian Help.md#Change the link dispaly text]]
+
+**Wikilink format**
+
+**Markdown format**
+格式：\[Display text](Link URL)
+本身显示的文本和链接的目标就是分离的
 
 ## 问题
 1. 能不能让搜索出来的文件和 `Files` 中的当前选中文件 同步？
