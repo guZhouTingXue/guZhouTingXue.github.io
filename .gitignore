@@ -1,0 +1,14 @@
+
+node_modules/
+src/.vuepress/.cache/
+src/.vuepress/.temp/
+src/.vuepress/dist/
+src/.trash
+.env
+src/.obsidian/workspace.json
+src/.obsidian/plugins/editing-toolbar/data.json
+src/.obsidian/app.json
+src/.obsidian/plugins/obsidian-task-progress-bar/data.json
+src/.obsidian/plugins/obsidian-task-progress-bar/data.json
+src/1-Inbox
+package-lock.json

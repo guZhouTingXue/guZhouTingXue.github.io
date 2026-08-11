@@ -1,0 +1,171 @@
+---
+category: 工具
+---
+# Windows
+系统相关配置
+
+## 传递优化
+>[!info]
+>传递优化能够快速、可靠地提供 Windows 和 Microsoft store 应用更新以及其他Microsoft 产品。
+>
+
+将本地下载的windows 更新 以及 应用 程序 上传给 已连接Internet 的其他电脑，也可以从其他电脑上下载windows 更新 以及应用。
+
+没有使用需求，还占用网络带宽，关闭。
+路径：设置-》更新和安全-》传递优化-》允许从其他电脑下载
+
+## 以管理员身份运行程序
+**单次运行**
+鼠标右键选中程序-》选择 “以管理远身份运行”
+![](./attachments/Windows.webp)
+
+打开程序后会弹出对话框：是否允许应用对设备进行更改，点击是
+
+**每次都以管理员身份运行**
+鼠标右键选中程序-》属性-》兼容性-》更改所有用户的设置-》设置-》以管理员身份运行此程序
+![|347x220](./attachments/Windows-1.webp)
+
+### msi
+1. win + x：选择 Windows PowerShell(Admin) 或其它方式 以管理员身份打开powershell
+![|300x119](./attachments/Windows-22.webp)
+2. 切换到msi包 路径（查看路径-》拷贝-》粘贴到powershell中），并通过msiexec安装msi
+![|300x42](./attachments/Windows-25.webp)
+
+![进入安装|300x234](./attachments/Windows-26.webp)
+>[!note]
+使用tab补全的问题：1. 好像只会按照前面的几个字符匹配；2. 会自动补全为.\product.msi，已经切换到当前路径了，不需要前面的.\ (按理说有这个应该没关系啊)，只保留product.msi
+
+![自动补全文件名安装时报错|300x182](./attachments/Windows-23.webp)
+
+查看msiexec 帮助
+```bash
+msiexec -h
+```
+
+```txt title="syntax"
+msiexec /Option <Required Parameter> [Optional Parameter]
+Install Options
+	</package | /i> <Product.msi>
+		Installs or configures a product
+	/a <Product.msi>
+		Administrative install - Installs a product on the network
+```
+
+## Windows Defender 导致的CPU、内存占用异常
+之前电脑用着用着就会卡顿个几秒（主要是用Qtcreator 敲代码时），刚开始以为是Qtcreator的问题。后面发现不是。查看任务管理器，Defender 占用内存持续增长，没有停止的趋势。
+尝试了网上的各种办法，都没有效果。包括将文件夹添加到 “排除项”，修改一些设置。
+只能每次开机启动后手动关闭实时保护。
+最近倒是没发现Defender 引起的异常了。
+关闭设置路径：设置-》Windows 安全中心 -》 病毒和威胁防护 -》 管理设置 -》 实时保护
+![|253x151](./attachments/Windows-2.webp)
+
+![|252x216](./attachments/Windows-3.webp)
+
+
+## 修改系统显示语言
+通常个人购买的PC安装的是家庭版，无法修改系统语言，需要升级到专业版
+
+1. 查看系统版本信息
+- 设置-》系统-》关于-》Windows 规格
+- cmd（win + R 快捷键）：winver
+2. 升级到专用版本
+设置-》更新和安全-》激活-》更改产品密钥-》输入密钥，确认升级
+
+3. 添加带有语言包的语言
+设置-》时间和语言-》语言-》添加语言
+
+>[!note]
+>如果通过软件（如WUB）禁用了系统更新，需要先启用更新，然后进行下载，否则可能下载失败，错误码：# 0x80073d01
+
+![|248x95](./attachments/Windows-4.webp)
+4. 选择 `Windows 显示语言`
+重启系统后生效
+![|305x68](./attachments/Windows-5.webp)
+
+5. 激活 Activation
+>
+>We can't activate Windows on this device because you don't have a
+valid digital license or product key. If you think you do have a valid
+license or key, select Troubleshoot below. Error code: OxC004C060
+
+使用网上的密钥升级系统后无法激活系统，无法使用一些系统功能
+如：
+![|304x60](./attachments/Windows-6.webp)
+	无法设置桌面
+通过 [CMWTAT_Digital_Release_2_7_2_0](https://github.com/TGSAN/CMWTAT_Digital_Edition)激活系统
+- 下载程序
+- 管理员身份运行
+- 点击Active，等待激活完成
+![|251x141](./attachments/Windows-7.webp)
+	提示激活成功
+- 重启
+结果：
+![|299x102](./attachments/Windows-8.webp)
+
+
+##  Windows Terminal
+>[!info]
+>The Windows Terminal is a modern, fast, efficient, powerful, and productive terminal application for users of command-line tools and shells like Command Prompt, PowerShell, and WSL. Its main features include multiple tabs, panes, Unicode and UTF-8 character support, a GPU accelerated text rendering engine, and custom themes, styles, and configurations.
+
+[项目地址](https://github.com/microsoft/terminal?tab=readme-ov-file)
+[说明文档](https://learn.microsoft.com/en-us/windows/terminal/)
+**Installing**
+进入 Releases 页面，在 Assets 下找到后缀为 msixbundle 的链接（文件名称过长不显示后缀，可通过鼠标停留在链接上方，查看浏览器左下角完整的链接路径中的文件名称）
+
+双击运行安装程序
+![|300x176](./attachments/Windows-9.webp)
+
+>[!note]
+>不知道是不是我关闭了更新的原因，点击install 后就没有反应了。在启用更新后再进行install会进入下载界面。
+
+**修改默认terminal**
+1. 最后一个标签左侧下拉箭头-》Settings
+![|300x239](./attachments/Windows-12.webp)
+
+2. Startup -》 Default terminal application -> Windows Terminal
+![](./attachments/Windows-13.webp)
+
+3. 设置完成后通过鼠标右键打开的terminal 使用的就是 windows terminal
+![](./attachments/Windows-14.webp)
+
+效果：
+![|398x141](./attachments/Windows-11.webp)
+- multiple tabs: 可以在一个窗口内以标签页的形式容纳多个窗口
+	- 可以分离或合并窗口
+- panes：可以在多个方向分屏
+
+## UniGetUI
+>[!info]
+>- An intuitive GUI for the most common CLI package managers for Windows 10 and 11
+>- An application that makes managing your software easier, by providing an all-in-one graphical interface for your command-line package managers.
+
+[项目地址](https://github.com/marticliment/UnigetUI)
+
+效果：
+![|500x276](./attachments/Windows-10.webp)
+
+
+## 输入法配置
+**中文输入法中的中英文切换**
+1.  切换到中文输入法
+![](./attachments/Windows-15.webp)
+中：当前处于 Chinese Mode
+拼：当前为中文输入法
+2. 鼠标右键点击 “中”，选择Settings
+![](./attachments/Windows-16.webp)
+3. 进入按键设置
+![|299x85](./attachments/Windows-17.webp)
+4. 配置mode 切换按键
+![|201x148](./attachments/Windows-18.webp)
+
+
+**在不同输入法之间进行切换**
+![|301x388](./attachments/Windows-19.webp)
+	
+	配置路径：Settings-》Devices-》Typing-》Advanced keyboard settings-》Input language hot keys
+	
+![|302x324](./attachments/Windows-20.webp)
+	Between input languages-》Change Key Sequence...
+	
+![|297x153](./attachments/Windows-21.webp)
+

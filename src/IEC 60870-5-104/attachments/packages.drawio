@@ -1,0 +1,55 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) ioDraw.com/3.5.1 Chrome/124.0.6367.49 Electron/30.0.0 Safari/537.36" version="24.7.17">
+  <diagram name="Page-1" id="W-b6PMB1VAf593q08UTs">
+    <mxGraphModel dx="724" dy="434" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="f5fa43uqoQvkxFZRTyOv-3" value="Milliseconds(D7-D0)" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="80" y="40" width="400" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="f5fa43uqoQvkxFZRTyOv-4" value="&lt;br&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;&quot;&gt;Milliseconds(D7-D0)&lt;/span&gt;&lt;div&gt;&lt;br/&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="80" y="80" width="400" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="rglTWoup23GNfHAqAj9t-1" value="IV(D7)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="120" width="50" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="rglTWoup23GNfHAqAj9t-2" value="RES&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;1&lt;div&gt;(D6)&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="130" y="120" width="50" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="rglTWoup23GNfHAqAj9t-3" value="Minutes(D5-D0)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="180" y="120" width="300" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="rglTWoup23GNfHAqAj9t-4" value="SU(D7)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="160" width="50" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="rglTWoup23GNfHAqAj9t-5" value="RES2&lt;div&gt;(D6-D5)&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="130" y="160" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="rglTWoup23GNfHAqAj9t-6" value="Hours(D4-D0)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="230" y="160" width="250" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="rglTWoup23GNfHAqAj9t-7" value="Day of week(D7-D5)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="200" width="250" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="rglTWoup23GNfHAqAj9t-9" value="Day of Month(D3-D0)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="330" y="200" width="150" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="rglTWoup23GNfHAqAj9t-10" value="RES3(D7-D4)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="240" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="rglTWoup23GNfHAqAj9t-14" value="Month(D3-D0)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="240" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="rglTWoup23GNfHAqAj9t-15" value="Years(D6-D0)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="130" y="280" width="350" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="rglTWoup23GNfHAqAj9t-16" value="RES4&lt;div&gt;(D7)&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="280" width="50" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="rglTWoup23GNfHAqAj9t-17" value="CP56Time2a" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#6c8ebf;fillColor=#dae8fc;fontStyle=1;fontSize=20;" vertex="1" parent="1">
+          <mxGeometry x="80" width="140" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

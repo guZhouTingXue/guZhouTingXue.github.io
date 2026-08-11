@@ -1,0 +1,209 @@
+---
+category: 读书笔记
+star: "true"
+---
+# Tr.en.d accounting system
+
+## Introduction
+
+A neat person may thoroughly capture his expenses and record profits, but these records can only suggest to him how he handles money, they won't provide him with an answer as to why his funds are distributed in such a way. Moreover, he won't have an understanding how to improve the situation either. Usually a person who decides to meticulously record expenses, is at first unpleasantly astonished by their volume, and then begins to save, which often only worsens the situation. Because in order to earn more, one needs to spend more, but this is not obvious from the record of spending.
+
+---
+
+The reason is that with normal accounting we focus only on what is lost, and not on what is gained - that is, we deliberately put ourselves in the position of a loser, not a winner. `Tr.en.d` accounting system makes it possible to turn our wastes in our victories.
+
+## Principle I: Focus on benefits
+
+**The money is spent not at time of the transaction, but in the period when we enjoy the result of the bargain.**
+
+For example, it follows out of an account statement that the funds for a hotel reservation were spent instantly, but in fact, we could use the room for a week. Obviously, money "worked" all this week, and not at the moment they were debited.
+
+Therefore, let us leave accounting of the time of a transaction for monitoring account balances, and to monitor expenditures, record the term of relevance of transaction, calling it the **active period**.
+
+---
+
+Thus, barely begun, we have turned an instant loss in a week of acquisitions.
+
+## Principle II: Assess the impact of spending on your state
+
+People have long noticed that money is closely tied with the time - we can also relate our expenses to different aspects of time. So, the past, the present, the future.
+
+### Urgent expenses
+
+Costs that allow us to maintain our present state are the present time expenses. Household and utilities, food, gasoline, taxes - on the whole, all that allows you to maintain the current standard of living is the present time expenses, let us call them **urgent expenses**
+
+### Pleasures
+
+We spend part of our money on pleasures. Usually, getting a pleasure lasts a relatively short time(alas), then we are left with only the memory and a few trifles: recollections of an interesting holiday, tan, magnets on the fridge, the charm of an expensive dinner, and so on. Obviously, these costs are a contribution to our past. The received pleasures are incentive to new achievements, reduce stress levels, increase efficiency, and therefore one should not treat the expenses on pleasures as needless waste, just as one should not underestimate the influence of the past on his life.
+
+## The distribution of tr.en.d parameters
+
+Almost each of our expenditures is made up of a combination of three types of expenses. We should learn to allocate each type in order to eventually obtain an individual financial profile, based on which it would already be possible to build analysis and generate recommendations.
+
+There exist simple rules for the distribution of expenditures by category. First assess whether there is a product or a service cheaper than you got, though not so comfortable and quality. The cost of this cheap option is the size of the **current spending**; all that is above this amount is the cost of your comfort and development. Estimate how much of the cost of a product or a service will help you save in the future or gin advantages - this is the **cost of development**, the rest is net drains on the fun. This process has another important aspect: by allocating costs you will further evaluate the effect of spending on your life, take a detached view of them.
+
+> Configuring the categories of spending will, in most cases, allow the program to distribute the parameters of spending automatically, requiring your interference only in certain special cases.
+
+Having assigned all the parts of your costs, we need to determine how exactly they affect our life.
+
+## Tr.en.d details
+
+Having assigned all the parts of our costs, we need to determine how exactly they effect our life.
+
+### Urgent expenses
+
+For urgent expenses, only the **active period** is important. For example, the produce purchased on the weekend has a one week period of urgency. Dividing the sum by the number of days, we obtain the average daily contribution of current expenditures to the value that we call the standard of living for the considered period.
+
+### Pleasures
+
+For spending on pleasure, the period of urgency is not so important as the **period of influence**. An event can last only one hour, but the impression of it may be fresh for a week or a month, this is exactly the period of influence. It is also important to assess **efficiency**: an unhappy order in a restaurant can spoil the memory of the evening and reduce the efficiency of spending to zero. Performing the same calculations as with current expenditures, i.e. dividing the sum by the period of influence and multiplying by the efficiency, we obtain the average daily contribution to the `standard of living` for the period of influence. Not e that this part is more inert, as it is accumulated for months and years.
+
+Also, an expense can be marked as a penalty to the pleasure, i.e. deliver an unpleasant experience. For example, medication might be unpleasant, though useful.
+
+### Development
+
+For investment expenses, of more importance, too, is the **period of influence**, in which the investment impact effects, such as 
+
+- reduction of current expenses and increase in their efficiency;
+
+- revenue growth;
+
+- reducing adverse risks;
+
+- improving the efficiency of spending on incentives.
+
+Typically, the effectiveness of investments is difficult to estimate at once, and so such an estimation can be done later. Dividing the amount of investment by the period of influence, we obtain the investment contribution to the `standard of living` for the period.
+
+This type of spending can also be marker as a penalty if it has a negative impact on our future, for example, smoking might be enjoyable but it's harmful.
+
+### subsequent effect
+
+An aspect of an expense can be marked as the **subsequent effect**. This means that the period of influence begins after the end of the active period, and not with it. `We can enjoy an entertaining file right from the opening titles, while the advantage of driving courses can only be taken upon completion of the lessons, this is exactly a subsequent effect.`
+
+Now let us describe the capabilities of analyzing the data we have introduced.
+
+## Instant tr.en.d summary
+
+At any time, you can determine how much a day of your life costs, let's call it the **standard of living** Adding all components of the average daily cost of current life, pleasure and development, applicable at this point, we get the current standard of living. Of course, it is desirable that this value be inferior to daily income.
+
+Having put the amounts of three aspects of spending on a special circle diagram, we get the "**Rose of spending**". The total vector of such a diagram clearly shows the nature of expenses. Each sector of the Rose of spending relates to the different way of life. The program will give you a description of the calculated sector, the extent of its impact on your life and provide possible recommendations.
+
+Also, the program will generate the `list of expenses applicable at the moment`; the list is sorted by the degree of contribution of each expenditure to the standard of living. Examine this list and, if necessary, adjust the parameters of transactions in accordance with the recommendations of the program. Remember, we are focusing on benefits: all expenses in this list are active and therefore have to work - do not forget to use what is already paid.
+
+---
+
+After evaluation of the situation at the moment, you can learn how the present state of affairs was formed over time.
+
+## Tr.en.d summary for a period
+
+The addtion of costs for a period allows us to calculate the average standard of living for the period and build the respective "Rose of spending". Over time, you will get the graph of your standard of living and understand what it its made up of and how it changes.
+
+The graph displays the time aspects of spending in different colors, so you can clearly see how your life has changed over the period. By studying the data, one can see what expenses are desirable for achieving a balance between the three time components and what expenses should be avoided. These answers are often evident only because of the triple record.
+
+At the same time, you can display the average daily income and the dynamics of its change in the period. Obviously, the standard of living depends only on our spending but it, in turn, is limited with income. Days in which the standard of living curve is above the level of income are loss making, it is useful to analyze the reasons for additional expenses on such days and reassess the validity of such expenses in the future.
+
+---
+
+The combined assessment of the parameters of all financial records may not be enough for a full analysis of the situation, in this case, working with projects can help.
+
+## Projects
+
+An important tool for the analysis is grouping various financial records in projects. For example, vacation or home redecoration are good examples of projects. As a rule, a project must have a definite goal and be limited to a certain time frame. When the goal of the project is achieved, it is closed and is displayed in a separate section of the closed projects.
+
+The program allows you, when you create or edit a transaction, to include it in one of the projects. Based on the parameters of the transactions, the program will calculate the duration of the project and its other parameters.
+
+Besides the classical aggregate indicators such as amounts of spending and income, distribution of records by category, the program will build the "Rose of spending" for the project, a measure of its tr.en.d profile.
+
+---
+
+Accounting for the expenses in accordance with the tr.en.d method will allow you to better understand yourself, learn your strengths and use time and money more productively.
+
+## Budgets
+
+Budget is the scheme of income and expenditure for a certain period of time, allowing to plan finances. Typically, budget is divided into **budget items**, each of which regulates movements of funds for a certain category of income or expenditure.
+
+Primitive approach to the budget consists in controlling expenses so that they do not leave the previously designated box, but with proper approach, budget can be a means of detailed planning and study of financial flows.
+
+Most of revenues and expenses has the stable nature, repeating from month to month with virtually no changes. `Typically, this is salary, urgent expenses or funds being put aside for certain purposes (for example, for holiday)`. However, there is a significant part of "spontaneous" expenses or revenues, which are irregular and poorly subject to planning. When stable and unstable parts of the budget are considered together, it is difficult to build reliable plans and to find trends in your financial life.
+
+---
+
+That is why **tr.en.d** implements a two-level system of budget. The basic level contains **general budget**, which serves for long-term planning of finance.
+
+### The general budget
+
+Item of income or expenditure of the general budget may have one or more **budget records** that indicate how much money and for what purpose will be reserved. In the record, you can specify a fixed amount or a rate of flow of funds for these purpose.
+
+> For example: you can specify the expected monthly influx of \$10,000 as wages, or indicate that during this year the income of \$120,000 is expected, those records are equivalent.
+
+
+
+Form the effective date of a budget record, the program will charge the amount for the corresponding budget item on the daily basis, so that it is clearly seen how much money can be spent for certain purpose at this time.
+
+> For example, if a record scheduled the expense in the form of \$50 a day for food, then a day later the item of the general budget for the purchase of products will have a size of \$50, two days later \$100, and a week later \$350. Assume that after this week it was spent \$400 on food in a supermarket, then the budget item will be set to(\$50), and you will need to wait a certain period of time until the amount enough for the next purchase is accumulated.
+
+
+
+**Thus, there will always be obvious how the actual spending relates to the planned one and how much money for what purposes you can spend right now**
+
+
+
+Likewise, the general budget shows how much money must be received or earned to date.
+
+---
+
+For each budget item the program calculates the quality of execution indicator and display it as a dial with values from "-" to "+". Summing indicators by item, the program calculates the overall quality of execution of the budget as a whole. Additionally, the program calculates the budget violation index, which is equal to the number of the budget items identified as "problem" at the moment. Two indicators together allow you to instantly assess the degree to which your current finances comply with your budget prospects.
+
+> Negative deviation indicates the degree of violation of the budget, positive the degree of saving for this item, zero offset means strict adherence to plans.
+
+### Formation of the general budget
+
+Assess the main items of income and expenditure, and then select those that meet one of the following criteria.
+
+**Stable items**
+
+Expenses or revenues are recurring and stable.
+
+**Accumulative items**
+
+Expenses recur relatively rarely, but periodically you put aside a fixed amount for the future expense of this type. For example, every month you put aside part of the funds for holiday.
+
+**Restorative items**
+
+Spending is made as the prior expense of this type is compensated. You sort of take credit from yourself and do not repeat such an expense until you pay off the previous.
+
+For each identified case, create a budget record with a note on to what it relates.
+
+If the program has accumulated data for the period more than a month, then using the budget generation feature, you can provisionally create an approximate general budget. Adjust the automatic budget according to your expectations, make notes in the required records.
+
+---
+
+Every day the size of the items of the general budget will vary. Referring to them, watch how much money is available to you for various purpose at the moment. Stick to a simple rule: if the available balance for an item of the general budget is negative, avoid this type of spending if possible.
+
+
+
+### Budget for the period
+
+The general budget shows the state of funds that has developed over a long period of time. To control the finances for a limited period of time, create the **budget for the period** in the program
+
+After specifying the budget period, the program will form the budget for the period on the basis of records of the general budget. Items of the budget for the period reflect the amount available for the entire period, in contrast to the general budget, which is always calculated at the current time.
+
+As funds are spent or received, the program displays the **percentage of execution** for the budget item.
+
+You can enter budget records pertaining only to the budget for the period to account for the expenses with temporary nature not suitable for consideration in the general budget.
+
+---
+
+Also, by introducing the correcting budget records with negative amounts, you can compensate for accumulative items of the general period within the budget period.
+
+> For example, if it was provided to put aside 500 pounds a month for holiday, the budget for month will have the item of expenditure on holiday in the amount of 500 pounds. But since you do not want to spend that money this month, you can enter a budget record of -500 pounds, so that the size of the item of expenditure on holiday was 0 pounds, as planned. Each such negative lock indicates the amount of funds that should be put aside over the period.
+
+### Budget analysis
+
+Closely monitor the quality of budgets, evaluating their performance measures and indicators of violations.
+
+---
+
+Poor execution of **budgets for the period** indicates inaccurate planning of temporary and spontaneous expenses, which is quite acceptable if their amounts do not violate the integrity of the general budget.
+
+Violations in the execution of the **general budget** indicate significant changes in the nature of your expenses or earnings. Carefully review the items that have accumulated a significant discrepancy, adjust the item by a new budget record or draw a conclusion that your expenses or revenues should be appropriately normalized.

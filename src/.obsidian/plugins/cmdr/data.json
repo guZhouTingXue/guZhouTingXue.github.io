@@ -1,0 +1,43 @@
+{
+  "confirmDeletion": true,
+  "showAddCommand": true,
+  "debug": false,
+  "editorMenu": [],
+  "fileMenu": [],
+  "leftRibbon": [
+    {
+      "id": "obsidian-task-progress-bar:minimal-quick-capture",
+      "icon": "lucide-activity-square",
+      "name": "Task Genius: Minimal Quick Capture",
+      "mode": "desktop"
+    },
+    {
+      "id": "custom-commands:custom-cmd-open-quick-capture",
+      "icon": "lucide-album",
+      "name": "Custom Commands: Open Quick Capture",
+      "mode": "any"
+    }
+  ],
+  "rightRibbon": [],
+  "titleBar": [],
+  "statusBar": [],
+  "pageHeader": [],
+  "macros": [],
+  "explorer": [],
+  "textToolbarCommands": [],
+  "hide": {
+    "statusbar": [],
+    "leftRibbon": []
+  },
+  "spacing": 8,
+  "advancedToolbar": {
+    "rowHeight": 48,
+    "rowCount": 1,
+    "spacing": 0,
+    "buttonWidth": 48,
+    "columnLayout": false,
+    "mappedIcons": [],
+    "tooltips": false,
+    "heightOffset": 0
+  }
+}

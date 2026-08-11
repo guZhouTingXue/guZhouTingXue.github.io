@@ -1,0 +1,11 @@
+{
+  "commands": [
+    {
+      "id": "open-quick-capture",
+      "name": "Open Quick Capture",
+      "path": "1-Inbox/QuickCapture.md",
+      "type": "open"
+    }
+  ],
+  "leaf": false
+}
